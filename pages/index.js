@@ -1,12 +1,11 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import About from '../components/content/About'
-import Skills from '../components/content/SkillsIcons'
 import Projects from '../components/content/Projects'
 import SkillsIcons from '../components/content/SkillsIcons'
 
-
 export default function Home() {
+
+
   return (
     <>
       <Head>
@@ -20,6 +19,7 @@ export default function Home() {
         <SkillsIcons/>
         <About/>
         <Projects/>
+
 
     
 

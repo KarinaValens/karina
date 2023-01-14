@@ -1,4 +1,4 @@
-import {createContext, useState} from 'react'
+import {createContext, useEffect, useState} from 'react'
 
 export const AppContext= createContext()
 
@@ -19,9 +19,20 @@ const skillsAnim ={
         opacity: [0, .5,0.8, 1 , 1, 1,0.8, .5 , 0] ,
           },
 }
+  /* creating stage for the projects */
+  const [projects, setProjects]=useState([])
 
+  /* fetchin projects */
+    useEffect(()=>{
+    async function  loadProjects() {
+        const res = await fetch('/api/')
+        const projectsData = await res.json()
+        setProjects(projectsData)
+        console.log(projectsData)}
+        loadProjects();//calling the loadProjects function
+  },[])
 
-const value = {show, setShow, skillsAnim}
+const value = {show, setShow, skillsAnim, projects}
 
   return (
     <AppContext.Provider value={value}>

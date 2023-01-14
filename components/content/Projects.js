@@ -1,24 +1,15 @@
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { AppContext } from '../context/AppContext'
 
 
 export default function Projects() {
 
-  /* creating stage for the projects */
-  const [projects, setProjects]=useState([])
-
-  /* fetchin projects */
-  async function  loadProjects() {
-  const res = await fetch('/api/')
-  const projectsData = await res.json()
-  setProjects(projectsData)
-  console.log(projectsData)
-  }
+const { projects }=useContext(AppContext)
+//loadProjects();
 
   return (
-    <section id="projects">
-
-      <button onClick={loadProjects}>Projects</button>
+    <section>
 
       {projects.map((project)=>{
         return (

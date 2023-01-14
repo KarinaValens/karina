@@ -4,7 +4,7 @@ export const project= [
   name : 'Colors & Animations',
 /*   projectimg:	'https://kvalens.dk/Projects_Img/Colors_%26_Animations/colors%26animations_light-mode.jpg',
  */  
- projectimg:'/media/images/about_me.jpg',
+ projectimg:'/media/projects/Colors_&_Animations/colors&animations_dark_mode.jpg',
   description: 'In this assignment, we were applying a color pallet to a given mockup landing page. We added a dark theme later on and then added animations',
   mockup: 'https://kvalens.dk/Projects_Img/Colors_%26_Animations/colors%26animations_mockup.png',
   image: 'https://kvalens.dk/Projects_Img/Colors_%26_Animations/colors%26animations_color-palette.png',
