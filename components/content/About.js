@@ -1,29 +1,25 @@
 import Image from 'next/image'
 
-function About() {
+export default function About() {
   return (
-    <div id="about-section">
-          
-          <article id="about-me-article">
-              <div id="about-me-text">
+          <article id="about-container">             
                   <h2>About Me</h2>
-                  <p>My name is Karina Valens, I have been a Frontend Developer and Multimedia Design student at KEA
-                      in the last year and a
-                      half.
-                      Where my passion for; web development, animations and UI/UX design; has increased.
-                      Previously, I learned basic programing on my own and I fall in love with the subject, for that
-                      reason I decided to start with a formal education at KEA, changing in that way my career path.
-                      I am really looking forward to expanding my abilities in these subjects and apply that
-                      knowledge.
-                  </p>
+                  <div className='glass-effect picture-container' /* class="projects-information" */>
+                  <Image className="karina-pic"   src={'/media/images/about_me.jpg'} alt="Karina-Valens" width="220" height="220"  sizes="(max-width: 700px) 100vw, 700px"/>
+                  </div>
+                  
+                  <p id="presentation">Hi!! I am Karina. I love coding, knitting, making handmade soap and I love coffee! 
+                     I really like to learn a lot of new things. 
+                     Back in my country, Ecuador, I studied science in the high school Chemistry, Biology, Anatomy, Physics, well I wasn´t really good at the last one. 
+                     I was also into sports (now I really have to push myself to go to the gym := ).
+                     I tried to learn to play guitar and piano, that didn’t go so well, but I know how to sing, … kind of. 
+                     In College, I studied Business, and I worked in that field for some years.  
+                     When I moved to Denmark, I started learning a lot of cool stuff among them, coding!!! And there is where this amazing journey starts. 
+                     Welcome to my portfolio !
                   <a /* class="cta-btn" */ href="./docs/Karina_Valens_CV.pdf" download target="_blank">More...</a>
-              </div>
-              <div id="about-me-fig" /* class="projects-information" */>
-                  <Image /* class="project-img"  */ src={'/media/images/about_me.jpg'} alt="Karina-Valens" width="100" height="100"  sizes="(max-width: 700px) 100vw, 700px"/>
-              </div>
+                  </p>
+              
           </article>
-      </div>
   )
 }
 
-export default About

@@ -4,9 +4,9 @@ export const AppContext= createContext()
 
 
 export default function AppContextProvider(props) {
-
+/* navigation menu */
 const [show, setShow]= useState(false)
-
+/* skills animations */
 const skillsAnim ={
     hidden:{
         x: 0, 
@@ -16,11 +16,9 @@ const skillsAnim ={
     visible:{
         x: '80vw' , 
         y: ['0vh', '10vh', '0vh'],
-        opacity: [0, .5, 1 , 1, 1, .5 , 0] ,
+        opacity: [0, .5,0.8, 1 , 1, 1,0.8, .5 , 0] ,
           },
 }
-
-
 
 
 const value = {show, setShow, skillsAnim}
