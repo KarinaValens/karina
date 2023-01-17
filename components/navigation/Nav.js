@@ -18,8 +18,8 @@ const {show} = useContext(AppContext)
 
          {show ? <ul className="menus">
             <Anchor  href={"/"}>HOME</Anchor>
-            <Anchor className="anchor" href={"/projects"}>PROJECTS</Anchor>
-            <Anchor className="anchor" href={"/projects"}>ABOUT</Anchor>
+            <Anchor  href={"/projects"}>PROJECTS</Anchor>
+            <Anchor  href={"/about"}>ABOUT</Anchor>
         </ul>:  false}        
         
     </nav>   
