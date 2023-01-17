@@ -18,13 +18,8 @@ export default function Home() {
       <main>
         <SkillsIcons/>
         <About/>
-        <Projects/>
-
-
-    
-
-
-          
+        <Projects/> 
+         
       </main>
     </>
   )

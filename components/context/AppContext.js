@@ -25,10 +25,9 @@ const skillsAnim ={
   /* fetchin projects */
     useEffect(()=>{
     async function  loadProjects() {
-        const res = await fetch('/api/')
-        const projectsData = await res.json()
-        setProjects(projectsData)
-        console.log(projectsData)}
+        const res = await fetch('/api/');
+        const projectsData = await res.json();
+        setProjects(projectsData);}
         loadProjects();//calling the loadProjects function
   },[])
 
