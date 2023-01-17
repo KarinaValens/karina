@@ -1,21 +1,25 @@
 import Image from 'next/image'
-import React, { useContext, useState } from 'react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import React, { useContext} from 'react'
 import { AppContext } from '../context/AppContext'
 
 
 export default function Projects() {
 
 const { projects }=useContext(AppContext)
-//loadProjects();
+const router = useRouter();
+const {name} = router.query
 
   return (
-    <section>
+    <section className='grid'>
 
       {projects.map((project)=>{
         return (
-          <div key={project.id}>
-          <h2>{project.name}</h2>
-          <Image src={project.projectimg} alt={project.name} width={30} height={30}/>
+          <div key={project.id} className="center glass-effect" >
+          {/* <h3>{project.name}</h3> */}
+          <Image src={project.projectimg} alt={project.name} width="350" height="200"  sizes="(max-width: 700px) 100vw, 700px"/> 
+          <button className='glass-effect button'>{project.name}</button>
           </div>
         )
       })}
@@ -23,16 +27,3 @@ const { projects }=useContext(AppContext)
 
 )
 }
-
-
-{/* <h2>Recent Projects</h2>
-<div id="projects-list"> */}
-  {/*   <template id="single-template">
-        <div class="projects-information">
-            <img class="project-img" data-field="project-img" src="./images/SolomonSoundT.jpg"
-                alt="Solomon-Sound-Therapy-Picture">
-            <a href="./html/projects.html" data-field="project-name" class="clear-caption">Solomon</a>
-
-        </div>
-    </template> */}
-   {/*  </div> */}
