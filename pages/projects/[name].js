@@ -16,15 +16,23 @@ export default function Projects() {
         { show ? " ":
          <div key={project.id}>
           <h2>{project.name}</h2> 
-          <Image src={project.projectimg} alt={project.name} width={60} height={60}/> 
+          <di>
+          <div className='glass-effect picture-container'><Image src={project.projectimg} alt={project.name} fill sizes="(max-width: 700px) 100vw, 700px"/></div> 
           <p>{project.description}</p>
-          <Image src={project.mockup} alt={project.mockup} width={30} height={30}/> 
+          </di>
+          <div>
+          <div className='glass-effect picture-container'><Image src={project.mockup} alt={project.mockup} fill sizes="(max-width: 700px) 100vw, 700px"/> </div>
           <p>{project.detail}</p>
-          <Image src={project.image} alt={project.image} width={30} height={30}/> 
+          </div>
+          <div>
+          <div className='glass-effect picture-container'><Image src={project.image} alt={project.image} fill sizes="(max-width: 700px) 100vw, 700px" /></div> 
           <p>{project.detail2}</p>
-          <Image src={project.image2} alt={project.image2} width={30} height={30}/> 
+          </div>
+          <div>
+          <div className='glass-effect picture-container'><Image src={project.image2} alt={project.image2} fill sizes="(max-width: 700px) 100vw, 700px"/> </div>
           <p>{project.detail3}</p>
-          <Image src={project.image3} alt={project.image3} width={30} height={30}/> 
+          </div>
+          <div className='glass-effect picture-container'><Image src={project.image3} alt={project.image3} fill sizes="(max-width: 700px) 100vw, 700px"/> </div>
           <Link href={project.url} target="-blank">Visit Site</Link>       
          </div> }
     </>  

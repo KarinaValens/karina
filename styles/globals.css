@@ -1,12 +1,15 @@
 :root {
   --color-primary1: hsl(259, 71%, 32%);
-  --color-primary2: hsl(253, 66%, 55%);
+  --color-primary2: hsl(248, 80%, 76%);
   --color-gradient-prim-black: linear-gradient(135deg, var(--color-neutral1) 25%, var(--color-primary2));
 
-  --color-secondary1: hsl(35, 100%, 95%);
+  --color-secondary1: hsl(248, 80%, 76%);
   --color-secondary2: hsl(29, 78%, 78%);
+
   --color-bg-glass-effect: hsla(0, 38%, 95%, 0.07);
   --color-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --bg-img: url(/media/images/circle_scatter_haikei.svg) repeat center;
+
   --color-accent1: hsl(17, 72%, 55%);
   --color-accent2: hsl(305, 58%, 34%);
 
@@ -22,16 +25,21 @@
   :root {
     --color-primary1: hsl(259, 71%, 32%);
     --color-primary2: hsl(253, 66%, 55%);
+
     --color-gradient-prim-black: linear-gradient(135deg, var(--color-neutral1) 25%, var(--color-primary2));
-    --color-body-bg: hsl(274deg 48% 91% / 20%);
-    --color-secondary1: hsl(35, 100%, 95%);
-    --color-secondary2: hsl(29, 78%, 78%);
+
     --color-bg-glass-effect: hsla(0, 38%, 95%, 0.07);
     --color-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --bg-img: url(/media/images/circle_scatter_haikei_dark.svg) repeat top;
+
+    --color-secondary1: hsl(231deg 73% 77%);
+    --color-secondary2: hsl(29, 78%, 78%);
+
     --color-accent1: hsl(17, 72%, 55%);
     --color-accent2: hsl(305, 58%, 34%);
+
     --color-neutral1: hsl(0, 0%, 3%);
-    --color-neutral2: hsl(120deg 19% 94% / 20%);
+    --color-neutral2: rgb(255, 255, 255);
   }
 }
 
@@ -41,7 +49,8 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  /* outline: 2px dotted hotpink; */
+  /*   outline: 2px dotted hotpink;
+ */
 }
 
 html,
@@ -53,9 +62,7 @@ body {
   font-family: var(--font-copy-text);
   font-size: calc(14px + 3 * ((100vw - 320px) / 680));
 }
-/* body {
-  background: radial-gradient(circle at 100%, var(--color-primary2), transparent 50%, #eee 75%, var(--color-primary1) 75%);
-} */
+
 /* ------------ // Basic Style // ------------------ */
 
 h1,
@@ -68,9 +75,9 @@ h4 {
 h1 {
   color: var(--color-neutral2);
 }
+
 .glass-effect {
-  /*   border: 1px solid var(--color-neutral2);
- */
+  border: 0.1px solid var(--color-bg-glass-effect);
   backdrop-filter: blur(10px);
   background: var(--color-bg-glass-effect);
   box-shadow: var(--color-box-shadow);
@@ -80,8 +87,8 @@ h1 {
 .picture-container {
   position: relative;
   text-align: center;
-  width: 17rem;
-  aspect-ratio: 1/0.5;
+  width: 16rem;
+  aspect-ratio: 1/0.6;
   margin: auto;
   padding: 1rem;
 }
@@ -164,18 +171,22 @@ img {
   width: 100%;
   text-align: center;
   border-radius: 5px;
-  border: 0.1px solid var(--color-primary2);
+  border: 0.01px solid var(--color-neutral2);
+  box-shadow: var(--color-box-shadow);
+  color: var(--color-secondary1);
+  font-weight: bold;
 }
 
 .sub-title {
-  color: var(--color-primary2);
+  color: var(--color-secondary1);
   text-align: center;
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 /* Mobil Firts */
 /* ------------------ // Header // --------------------- */
 
-header {
+header,
+footer {
   position: relative;
   background: var(--color-gradient-prim-black);
   transition-property: background-color;
@@ -183,10 +194,13 @@ header {
   transition-timing-function: cubic-bezier(0.1, 0.4, 0.5, 0.1);
   margin-bottom: 0;
 }
-/* #projects-page-header {
-  margin-bottom: 0;
-} */
-header:hover {
+
+nav {
+  background: linear-gradient(150deg, #6241d8 1%, hsl(0, 0%, 1%) 98.1%);
+}
+header:hover,
+nav:hover,
+footer {
   background: linear-gradient(-200deg, #6241d8 7.81%, hsl(0, 0%, 2%) 90.1%);
 }
 
@@ -249,9 +263,10 @@ header:hover {
 .menus {
   display: flex;
   flex-direction: column;
+  height: 72vh;
   gap: 4rem;
-  /*   z-index: 6;
- */ /* animating the navigation bar */
+  margin-bottom: 0;
+  /* animating the navigation bar */
   transition: transform 1s;
   padding: 4rem;
   font: 1.3rem var(--font-headings);
@@ -330,9 +345,8 @@ header:hover {
 #skills-list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 60%;
-  flex: 0 1 4rem;
-  margin: 4rem auto 0;
+  max-width: 80%;
+  margin: 2rem auto 0;
   column-gap: 3rem;
   row-gap: 1rem;
   justify-content: space-around;
@@ -349,13 +363,11 @@ header:hover {
 /* ------------ // About Me // ----------------------------- */
 #about-container {
   display: grid;
-  /*   justify-content: center;
- */
   grid-template-columns: 1fr;
   width: 100%;
   margin: auto;
   gap: 2rem;
-  padding: 2rem;
+  padding: 1.5rem 2rem 0;
 }
 
 .karina-pic {
@@ -370,21 +382,20 @@ header:hover {
 #presentation {
   flex: 1 2 18rem;
 }
-
-.wave svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
+/* --------- // Projects // ---------- */
+.projects h2 {
+  padding-bottom: 1.5rem;
 }
-
+.projects {
+  background: var(--bg-img);
+  padding: 1rem 0 3rem;
+}
 /* -------------------- // FOOTER// --------------------------- */
 footer {
-  margin-top: 3rem;
+  position: sticky;
   display: flex;
-  background-color: var(--color-primary2);
+  /*   background-color: var(--color-primary2);
+ */
   max-height: 5rem;
   padding: 1rem 2rem;
   justify-content: space-between;
@@ -399,6 +410,10 @@ footer {
 @media screen and (min-width: 600px) {
   .skills {
     left: -30vw;
+  }
+  #skills-list {
+    max-width: 60%;
+    margin-bottom: 2rem;
   }
 
   #about-container {
@@ -420,6 +435,11 @@ footer {
 @media screen and (min-width: 900px) {
   .skills {
     top: 18vw;
+  }
+
+  .projects {
+    padding: 1rem 0 3rem;
+    margin: auto 2rem;
   }
 }
 @media (prefers-color-scheme: dark) {

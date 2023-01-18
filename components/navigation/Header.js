@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <header>
-     <Nav/> 
+    
       {show ? " " : <div id="karina-pitch" style={{backgroundImage: 'url(/media/images/KarinaValens.png)'}}>
         <motion.h2
           className="skills"
