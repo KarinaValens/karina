@@ -1,11 +1,13 @@
 import Head from 'next/head'
+import { useContext } from 'react'
 import About from '../components/content/About'
 import Projects from '../components/content/Projects'
 import SkillsIcons from '../components/content/SkillsIcons'
+import { AppContext } from '../components/context/AppContext'
 
 export default function Home() {
 
-
+const {show}= useContext(AppContext)
   return (
     <>
       <Head>
@@ -15,12 +17,11 @@ export default function Home() {
         <meta name='keywords'content='portfolio frontend developer design '/>
       </Head>
 
-      <main>
+    { show ?" ":  <main>
         <SkillsIcons/>
         <About/>
-        <Projects/> 
-         
-      </main>
+        <Projects/>         
+      </main>}
     </>
   )
 }

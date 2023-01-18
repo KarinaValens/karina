@@ -15,7 +15,6 @@ const {show} = useContext(AppContext)
          <Image  src={"/media/images/logo.png"} width={50} height={50} alt="logo" sizes="(max-width: 700px) 100vw, 700px"/>
          <Burguer/>
         </div>
-
          {show ? <ul className="menus">
             <Anchor  href={"/"}>HOME</Anchor>
             <Anchor  href={"/projects"}>PROJECTS</Anchor>
