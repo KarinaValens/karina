@@ -3,9 +3,9 @@ import Image from 'next/image'
 export default function About() {
   return (
           <article id="about-container">             
-                  <h2>About Me</h2>
-                  <div className='glass-effect picture-container' /* class="projects-information" */>
-                  <Image className="karina-pic"   src={'/media/images/about_me.jpg'} alt="Karina-Valens" width="220" height="220"  sizes="(max-width: 700px) 100vw, 700px"/>
+                  <h2 className='sub-title'>About Me</h2>
+                  <div className='glass-effect picture-container karina-pic' /* class="projects-information" */>
+                  <Image  src={'/media/images/about_me.jpg'} alt="Karina-Valens" width="200" height="200"  sizes="(max-width: 700px) 100vw, 700px"/>
                   </div>
                   
                   <p id="presentation">Hi!! I am Karina. I love coding, knitting, making handmade soap and I love coffee! 

@@ -4,7 +4,7 @@ import React from 'react'
 export default function SkillsIcons() {
   return (
     <section id="skills-section">
-    <h2>Skills</h2>
+    <h2 className='sub-title'>Skills</h2>
     <div id="skills-list">
        <div className='icon-container'><Image width="40" height="40" className="icon" src={"/media/icons/html.png"} alt="icons"  sizes="(max-width: 700px) 100vw, 700px"/> </div>
        <div className='icon-container'><Image width="40" height="40" className="icon" src={"/media/icons/css.png"} alt="icons" sizes="(max-width: 700px) 100vw, 700px"/> </div>

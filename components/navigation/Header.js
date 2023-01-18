@@ -16,7 +16,7 @@ export default function Header() {
           variants={skillsAnim}
           initial="hidden"
           animate="visible" 
-          transition={{duration: 6,  repeat: Infinity, repeatDelay: 5}}
+          transition={{duration: 10,  repeat: Infinity, repeatDelay: 5}}
          >UX/UI DESIGNER
         </motion.h2>
 
@@ -26,7 +26,7 @@ export default function Header() {
           variants={skillsAnim}
           initial="hidden"
           animate="visible" 
-          transition={{duration: 6,  repeat: Infinity, repeatDelay: 10}}
+          transition={{duration: 10,  repeat: Infinity, repeatDelay: 10}}
         >FRONTEND DEVELOPER
         </motion.h2>
         
@@ -36,7 +36,7 @@ export default function Header() {
           variants={skillsAnim}
           initial="hidden"
           animate="visible"
-          transition={{duration: 6,  repeat: Infinity, repeatDelay: 15}}
+          transition={{duration: 10,  repeat: Infinity, repeatDelay: 15}}
          >MULTIMEDIA DESIGNER
         </motion.h2>
 
