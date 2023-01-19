@@ -3,9 +3,9 @@ import Image from 'next/image'
 
 export default function Footer() { 
   return (
-    <footer> 
+    <footer className='flex'> 
         <Image  width={30} height={30}  src={'/media/images/logo.png'} alt="logo" sizes="(max-width: 700px) 100vw, 700px"/>
-    <div id="icons-footer-container">
+    <div id="icons-footer-container" className='flex'>
         <a href="https://github.com/KarinaValens">
             <Image width={20} height={20} src={'/media/icons/github_white.png'} alt="github link" sizes="(max-width: 700px) 100vw, 700px"/>
         </a>

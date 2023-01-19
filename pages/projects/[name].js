@@ -14,25 +14,33 @@ export default function Projects() {
   return ( 
         <>   
         { show ? " ":
-         <div key={project.id}>
+         <div key={project.id} className="project-page">
           <h2>{project.name}</h2> 
-          <di>
-          <div className='glass-effect picture-container'><Image src={project.projectimg} alt={project.name} fill sizes="(max-width: 700px) 100vw, 700px"/></div> 
+          <div className=' picture-container'><Image src={project.mockup} alt={project.mockup} fill sizes="(max-width: 700px) 100vw, 700px"/> </div>
           <p>{project.description}</p>
-          </di>
-          <div>
-          <div className='glass-effect picture-container'><Image src={project.mockup} alt={project.mockup} fill sizes="(max-width: 700px) 100vw, 700px"/> </div>
+          
+          
+          <div className='center flex'>
+{/*           <div className=' picture-container'><Image src={project.projectimg} alt={project.name} fill sizes="(max-width: 700px) 100vw, 700px"/></div> 
+ */}          
+          <div className='flex'>
+          <div className=' picture-container'><Image src={project.image} alt={project.image} fill sizes="(max-width: 700px) 100vw, 700px" /></div> 
           <p>{project.detail}</p>
           </div>
-          <div>
-          <div className='glass-effect picture-container'><Image src={project.image} alt={project.image} fill sizes="(max-width: 700px) 100vw, 700px" /></div> 
+
+          <div className='flex'>
+          <div className=' picture-container'><Image src={project.image2} alt={project.image2} fill sizes="(max-width: 700px) 100vw, 700px"/> </div>
           <p>{project.detail2}</p>
           </div>
-          <div>
-          <div className='glass-effect picture-container'><Image src={project.image2} alt={project.image2} fill sizes="(max-width: 700px) 100vw, 700px"/> </div>
+
+
+          <div className='flex'>
+          <div className=' picture-container'><Image src={project.image3} alt={project.image3} fill sizes="(max-width: 700px) 100vw, 700px"/> </div>
           <p>{project.detail3}</p>
           </div>
-          <div className='glass-effect picture-container'><Image src={project.image3} alt={project.image3} fill sizes="(max-width: 700px) 100vw, 700px"/> </div>
+
+          </div>
+
           <Link href={project.url} target="-blank">Visit Site</Link>       
          </div> }
     </>  

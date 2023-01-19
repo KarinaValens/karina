@@ -5,7 +5,6 @@ export const project= [
   title: 'Colors & Animations',
   projectimg:'/media/projects/Colors_&_Animations/colors&animations_dark_mode.webp',
   description: 'In the theme “Design for Developers”, we applied a color pallet to a given landing page. We added a dark theme and later on, we added animations. The focus in this project was: design, color theory, dark mode and animations.',
-  /* mockup:'/media/projects/Sleepy_Baby/sleepy_baby_game_mockup.webp', */
   mockup: '/media/projects/Colors_&_Animations/colors&animations_mockup.webp', 
   image: '/media/projects/Colors_&_Animations/colors&animations_color_palette.webp',
   detail:	'I chose different shades of purple as primary colors, because in design, dark purples can give a sense wealth and luxury. Light purples are softer and are associated with spring and romance. The secondary colors are both quite light because I wanted to give a balance and contrast between the primary colors. The accent colors did not go as well as expected, that is why I changed them in the final product.',

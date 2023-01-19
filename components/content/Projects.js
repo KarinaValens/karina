@@ -21,7 +21,7 @@ const {name} = router.query
     <div className='grid'>
       {projects.map((project)=>{
         return (
-          <div key={project.id} className="center glass-effect" >
+          <div key={project.id} className="center flex glass-effect" >
           {/* <h3>{project.name}</h3> */}
           <div className='picture-container'>
         <Image src={project.projectimg} alt={project.name}  fill /* width={250} height={150} */  sizes="(max-width: 700px) 100vw, 700px"/> 

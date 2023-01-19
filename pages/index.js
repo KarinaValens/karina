@@ -18,7 +18,7 @@ const {show}= useContext(AppContext)
         <meta name='keywords'content='portfolio frontend developer design '/>
       </Head>
     <Header/>
-    { show ?" ":  <main>
+    { show ?" ":  <main className='flex'>
         <SkillsIcons/>
         <About/>
         <Projects/>         
