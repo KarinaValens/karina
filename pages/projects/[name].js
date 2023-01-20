@@ -16,8 +16,10 @@ export default function Projects() {
         { show ? " ":
          <div key={project.id} className="single-project-container">
           <h2 className='sub-title'>{project.name}</h2> 
-          <div className=' picture-container'>
-            <Image src={project.mockup} alt={project.mockup} fill sizes="(max-width: 700px) 100vw, 700px"/> </div>
+          <div className=' picture-container mockup'>
+            <Image src={project.mockup} alt={project.mockup} fill sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"/> </div>
           <p>{project.description}</p>
           
           

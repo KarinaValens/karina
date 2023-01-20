@@ -395,6 +395,9 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+.mockup {
+  width: 70%;
+}
 .single-project-container p {
   display: inline-block;
   flex: 1 1 40%;

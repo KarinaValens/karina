@@ -19,7 +19,7 @@ export const project= [
  name:	'Sleepy-Baby',	
  title:	'Sleepy Baby',	
  projectimg:'/media/projects/Sleepy_Baby/sleepy_baby_game_final_design.webp',
- descrition: 'The player must put the baby to sleep by clicking the objects that can help to that purpose. Those objects are the good objects each one has different value in points. The bad objects are the ones that keep the baby awake. If the player click 3 times in bad objects loses the game if the time runs out losses the game.If the player score 10 points before the times runs out wins the game.',
+ description: 'The player must put the baby to sleep by clicking the objects that can help to that purpose. Those objects are the good objects each one has different value in points. The bad objects are the ones that keep the baby awake. If the player click 3 times in bad objects loses the game if the time runs out losses the game.If the player score 10 points before the times runs out wins the game.',
  mockup:'/media/projects/Sleepy_Baby/sleepy_baby_game_mockup.webp',
  image: '/media/projects/Sleepy_Baby/sleepy_baby_game_predesign.webp',
  detail: 'This assignment was the first try that we got with JavaScript. It consisted in the following aspects: Design, test and develop an interactive web game: Draw an Activity Diagram and a State Machine Diagram for the game,	Coding the game from scratch using: HTML, CSS, CSS animations, JavaScript. Draw absolutely every single element in the game in Adobe Illustrator.	In the part of design, it was entirely up to me. I decided about color, fonts shapes, interface, etc',
@@ -33,7 +33,7 @@ export const project= [
  {    
 id:'3',	  
  name : 'Solomon-Sound-Therapy',
- title : 'Solomon Sound Therapy',
+title : 'Solomon Sound Therapy',
 projectimg:'/media/projects/Solomon_Sound_Therapy/Solomon_Sound_Therapy_final.webp',
 description:'This project was a group project in which we had to develop an online digital solution for an artist, an artisan, or a small business, which we had to choose, contact, and work with. The goal was to create a strong, professional online presence to bring value to the client and the client’s potential customers.',
 mockup: '/media/projects/Solomon_Sound_Therapy/Solomon_Sound_Therapy_mockup.webp',
