@@ -27,7 +27,7 @@ const {name} = router.query
         <Image src={project.projectimg} alt={project.name}  fill /* width={250} height={150} */  sizes="(max-width: 700px) 100vw, 700px"/> 
         </div>
          <Link className="glass-effec link" href={`projects/${project.name}`}>{project.name}</Link>
-          </div>
+        </div>
         )
       })}
     </div>
