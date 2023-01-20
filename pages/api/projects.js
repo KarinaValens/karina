@@ -28,7 +28,7 @@ export const project= [
  image3: '/media/projects/Sleepy_Baby/sleepy_baby_win_screen.webp',
  detail3: 'I developed entirelly: the game concept, design, the design of each of the screens and elements in the game, from scketches, Illustrator graphics, animation', 
 
- url: 'https://kvalens.dk/FirstSemester/Sleepy-Baby_game/index.html'
+ url: 'https://sleepy-baby-game.netlify.app/'
 
  }, 
  {    
@@ -44,7 +44,7 @@ image2: '/media/projects/Solomon_Sound_Therapy/Solomon_Sound_Therapy_considerati
 detail2: 'We code the page with the client information, but we change completely the design, in base of extensive research. The research includes SoMe trends, color pallet trends. Design Benchmarking, marketing strategies. The final products: Website, Social Media Guide and Design Guide.',
 image3: '/media/projects/Solomon_Sound_Therapy/Solomon_Sound_Therapy_RestApi.webp',	
 detail3: 'We work with Rest APIs in the products sections, bringing the data dynamically from a data base on Restdb.io that we built', 
-url:	'https://kvalens.dk/Second_Semester/Solomon-Sound-Therapy-Website/index.html'
+url:	'https://karinavalens.github.io/Solomon-Sound-Therapy-Website/'
 },
 {
 id:'4',	  
