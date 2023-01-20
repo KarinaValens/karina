@@ -6,10 +6,10 @@ export default function Footer() {
     <footer className='flex'> 
         <Image  width={30} height={30}  src={'/media/images/logo.png'} alt="logo" sizes="(max-width: 700px) 100vw, 700px"/>
     <div id="icons-footer-container" className='flex'>
-        <a href="https://github.com/KarinaValens">
+        <a href="https://github.com/KarinaValens" target="-blank">
             <Image width={20} height={20} src={'/media/icons/github_white.png'} alt="github link" sizes="(max-width: 700px) 100vw, 700px"/>
         </a>
-        <a href="https://www.linkedin.com/in/karinavalenswebdeveloper/">
+        <a href="https://www.linkedin.com/in/karinavalenswebdeveloper/" target="-blank">
             <Image width={20} height={20} src={'/media/icons/linkedin.png'} alt="linkeding" sizes="(max-width: 700px) 100vw, 700px"/>
         </a>
     </div>

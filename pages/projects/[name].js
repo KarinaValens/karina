@@ -24,19 +24,19 @@ export default function Projects() {
           
           
           <div className='center flex'>
-{/*           <div className=' picture-container'><Image src={project.projectimg} alt={project.name} fill sizes="(max-width: 700px) 100vw, 700px"/></div> 
- */}          
+       
           <motion.div className='flex' 
           initial={{x:'-100vw'}} 
           animate={{x:0}}>
-          <div className=' picture-container'><Image src={project.image} alt={project.image} fill sizes="(max-width: 700px) 100vw, 700px" /></div> 
+          <div className=' picture-container'>
+            <Image src={project.image}  alt={project.image} fill sizes="(max-width: 700px) 100vw, 700px" /></div> 
           <p>{project.detail}</p>
           </motion.div>
 
           <motion.div className='flex'
           initial={{x:'500vw'}}
           animate={{x:0}}>
-          <div className=' picture-container'><Image src={project.image2} alt={project.image2} fill sizes="(max-width: 700px) 100vw, 700px"/> </div>
+          <div className=' picture-container'><Image src={project.image2} alt={project.image2} fill responsive sizes="(max-width: 700px) 100vw, 700px"/> </div>
           <p>{project.detail2}</p>
           </motion.div> 
 
