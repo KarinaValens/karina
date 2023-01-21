@@ -1,4 +1,4 @@
-export const project= [
+export const projects = [
   {   
   id:'1',	
   name: 'Colors-&-Animations',

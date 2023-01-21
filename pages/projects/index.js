@@ -2,11 +2,13 @@ import Image from 'next/image'
 import Link from 'next/link';
 import React, { useContext} from 'react'
 import { AppContext } from '../../components/context/AppContext';
+import {projects} from '../api/projects'
+
 
 
 export default function ProjectList() {
 
-const { projects, show }=useContext(AppContext)
+const {  show }=useContext(AppContext)
 
 
   return (

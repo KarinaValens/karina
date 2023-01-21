@@ -19,16 +19,16 @@ const skillsAnim ={
            },
 }
   /* creating stage for the projects */
-  const [projects, setProjects]=useState([])
-
+/*   const [projects, setProjects]=useState([])
+ */
   /* fetchin projects */
-    useEffect(()=>{
+    /* useEffect(()=>{
     async function  loadProjects() {
         const res = await fetch('/api/');
         const projectsData = await res.json();
         setProjects(projectsData);}
         loadProjects();//calling the loadProjects function
-  },[])
+  },[]) */
 
 const value = {show, setShow, skillsAnim, projects}
 

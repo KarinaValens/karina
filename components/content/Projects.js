@@ -3,14 +3,14 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useContext} from 'react'
 import { AppContext } from '../context/AppContext'
-import Anchor from '../navigation/Anchor'
+import {projects} from '../../pages/api/projects'
 
 
 export default function Projects() {
 
-const { projects }=useContext(AppContext)
+//const { projects }=useContext(AppContext)
 const router = useRouter();
-const {name} = router.query
+//const {name} = router.query
 
   return (
 
