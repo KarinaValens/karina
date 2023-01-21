@@ -11,9 +11,7 @@ export default function Projects() {
   
  const {show }=useContext(AppContext)
  const router = useRouter();
- const {name} = router.query;
-
-  
+ const {name} = router.query;  
 
   const project = projects.find(project => project.name === name)//That's because find method stops searching when it finds the first element that satisfies the condition and returns it. So it only returns one project that matches the condition.
  
