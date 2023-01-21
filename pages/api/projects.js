@@ -50,7 +50,7 @@ url:	'https://karinavalens.github.io/Solomon-Sound-Therapy-Website/'
 id:'4',	  
 name : 'Hack-Hogwarts-Student-List',
 title : 'Hack-Hogwarts-Student-List',
-projectimg:'/media/projects/Hack_Hogwarts_Student_list/hogwarts-student-list_final.webp',
+projectimg:'/media/projects/Hack_Hogwarts_Student_list/hogwarts_student_list_final.webp',
 description:'The goal of this assignment was working and manipulating data for given Rest APIs, in vanilla JavaScript. Implementing several functionalities like sorting, filter, and search under certain conditions. String manipulation, array manipulation, design, animation, etc. were part of this project',
 mockup: '/media/projects/Hack_Hogwarts_Student_list/hogwarts-student-list_mockup.webp',
 image: '/media/projects/Hack_Hogwarts_Student_list/hogwarts-student-list.webp',
