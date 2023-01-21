@@ -8,10 +8,6 @@ import {projects} from '../../pages/api/projects'
 
 export default function Projects() {
 
-//const { projects }=useContext(AppContext)
-const router = useRouter();
-//const {name} = router.query
-
   return (
 
     <>
