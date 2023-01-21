@@ -19,6 +19,10 @@ export default function SkillsIcons() {
        <div className='icon-container flex'><Image width="60" height="60" className="icon" src={"/media/icons/deployment.png"} alt="icons" sizes="(max-width: 700px) 100vw, 700px"/> </div>
        <div className='icon-container flex'><Image width="60" height="60" className="icon" src={"/media/icons/nodejs.png"} alt="icons" sizes="(max-width: 700px) 100vw, 700px"/> </div>
     </div>
+    <div className='flex-column'>
+       <a className='credits' href="https://www.flaticon.com/free-icons/color-palette" title="color palette icons"> icons created by Muhammad Ali </a>
+       <a className='credits' href="https://www.flaticon.com/free-icons/react" title="react icons">React icon created by Dreamstale - Flaticon </a>
+      </div>
 </section>
   )
 }

@@ -26,8 +26,6 @@
     --color-primary1: hsl(259, 71%, 32%);
     --color-primary2: hsl(253, 66%, 55%);
 
-    --color-gradient-prim-black: linear-gradient(135deg, var(--color-neutral1) 25%, var(--color-primary2));
-
     --color-bg-glass-effect: hsla(0, 38%, 95%, 0.07);
     --color-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     --bg-img: url(/media/images/circle_scatter_haikei_dark.svg) repeat top;
@@ -111,33 +109,11 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
-
-/* .card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  position: relative;
-  text-align: center;
-  margin: auto;
-} */
-
-/* .card span {
-  display: inline-block;
-  transition: transform 200ms;
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-}
-
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
-}
- */
 
 .center {
   max-width: 95%;
@@ -171,7 +147,7 @@ img {
 header,
 footer {
   position: relative;
-  background: var(--color-gradient-prim-black);
+  background: linear-gradient(135deg, var(--color-neutral1) 25%, var(--color-primary2));
   transition-property: background-color;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.1, 0.4, 0.5, 0.1);
@@ -179,12 +155,12 @@ footer {
 }
 
 nav {
-  background: linear-gradient(150deg, #6241d8 1%, hsl(0, 0%, 1%) 98.1%);
+  background: linear-gradient(150deg, var(--color-accent2) 1%, hsl(0, 0%, 1%) 98.1%);
 }
 header:hover,
 nav:hover,
 footer {
-  background: linear-gradient(-200deg, #6241d8 7.81%, hsl(0, 0%, 2%) 90.1%);
+  background: linear-gradient(-200deg, var(--color-primary2) 7.81%, hsl(0, 0%, 2%) 90.1%);
 }
 
 #nav-mobil {
@@ -330,6 +306,10 @@ footer {
   column-gap: 3rem;
   row-gap: 1rem;
   justify-content: space-around;
+}
+
+.credits {
+  font-size: xx-small;
 }
 .icon-container {
   border: 1px solid var(--color-primary1);
