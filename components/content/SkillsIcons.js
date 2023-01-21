@@ -9,12 +9,15 @@ export default function SkillsIcons() {
        <div className='icon-container flex'><Image width="60" height="60" className="icon" src={"/media/icons/html.png"} alt="icons"  sizes="(max-width: 700px) 100vw, 700px"/> </div>
        <div className='icon-container flex'><Image width="60" height="60" className="icon" src={"/media/icons/css.png"} alt="icons" sizes="(max-width: 700px) 100vw, 700px"/> </div>
        <div className='icon-container flex'><Image width="60" height="60" className="icon" src={"/media/icons/js.png"} alt="icons" sizes="(max-width: 700px) 100vw, 700px"/> </div>
-       <div className='icon-container flex'><Image width="60" height="60" className="icon" src={"/media/icons/nodejs.png"} alt="icons" sizes="(max-width: 700px) 100vw, 700px"/> </div>
-       <div className='icon-container flex'><Image width="60" height="60" className="icon" src={"/media/icons/github.png"} alt="icons" sizes="(max-width: 700px) 100vw, 700px"/> </div>
+       <div className='icon-container flex'><Image width="60" height="60" className="icon" src={"/media/icons/react.png"} alt="icons" sizes="(max-width: 700px) 100vw, 700px"/> </div>
        <div className='icon-container flex'><Image width="60" height="60" className="icon" src={"/media/icons/software.png"} alt="icons" sizes="(max-width: 700px) 100vw, 700px"/> </div>
        <div className='icon-container flex'><Image width="60" height="60" className="icon" src={"/media/icons/database.png"} alt="icons" sizes="(max-width: 700px) 100vw, 700px"/> </div>
-       <div className='icon-container flex'><Image width="60" height="60" className="icon" src={"/media/icons/phone.png"} alt="icons" sizes="(max-width: 700px) 100vw, 700px"/> </div>
+       <div className='icon-container flex'><Image width="60" height="60" className="icon" src={"/media/icons/api.png"} alt="icons" sizes="(max-width: 700px) 100vw, 700px"/> </div>
+       <div className='icon-container flex'><Image width="60" height="60" className="icon" src={"/media/icons/command_line.png"} alt="icons" sizes="(max-width: 700px) 100vw, 700px"/> </div>
        <div className='icon-container flex'><Image width="60" height="60" className="icon" src={"/media/icons/website.png"} alt="icons" sizes="(max-width: 700px) 100vw, 700px"/> </div>
+       <div className='icon-container flex'><Image width="60" height="60" className="icon" src={"/media/icons/github.png"} alt="icons" sizes="(max-width: 700px) 100vw, 700px"/> </div>
+       <div className='icon-container flex'><Image width="60" height="60" className="icon" src={"/media/icons/deployment.png"} alt="icons" sizes="(max-width: 700px) 100vw, 700px"/> </div>
+       <div className='icon-container flex'><Image width="60" height="60" className="icon" src={"/media/icons/nodejs.png"} alt="icons" sizes="(max-width: 700px) 100vw, 700px"/> </div>
     </div>
 </section>
   )
