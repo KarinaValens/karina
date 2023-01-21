@@ -12,7 +12,7 @@ const {show} = useContext(AppContext)
     <>
     <nav >
         <div id="nav-mobil" className="flex">
-         <Image  src={"/media/images/logo.png"} width={50} height={50} alt="logo" sizes="(max-width: 700px) 100vw, 700px"/>
+         <Anchor href={"/"}><Image  src={"/media/images/logo.png"} width={50} height={50} alt="logo" sizes="(max-width: 700px) 100vw, 700px"/></Anchor>
          <Burguer/>
         </div>
          {show ? <ul className="menus flex">

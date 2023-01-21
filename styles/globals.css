@@ -1,9 +1,9 @@
 :root {
-  --color-primary1: hsl(259, 71%, 32%);
-  --color-primary2: hsl(248, 80%, 76%);
+  --color-primary1: hsl(250, 75%, 50%);
+  --color-primary2: hsla(251, 98%, 47%, 0.74);
   --color-gradient-prim-black: linear-gradient(135deg, var(--color-neutral1) 25%, var(--color-primary2));
 
-  --color-secondary1: hsl(248, 80%, 76%);
+  --color-secondary1: hsl(248, 86%, 54%);
   --color-secondary2: hsl(29, 78%, 78%);
 
   --color-bg-glass-effect: hsla(0, 38%, 95%, 0.07);
@@ -13,8 +13,8 @@
   --color-accent1: hsl(17, 72%, 55%);
   --color-accent2: hsl(305, 58%, 34%);
 
-  --color-neutral1: hsl(0, 0%, 3%);
-  --color-neutral2: hsl(0, 0%, 100%);
+  --color-neutral1: hsl(0, 0%, 100%);
+  --color-neutral2: hsl(0, 0%, 3%);
 
   /* ---- //Fonts Variables (Custom Properties// ----- */
   --font-headings: "Space Grotesk", sans-serif;
@@ -154,10 +154,10 @@ footer {
 
 nav,
 footer {
-  background: linear-gradient(150deg, var(--color-accent2) 1%, hsl(0, 0%, 1%) 98.1%);
+  background: linear-gradient(150deg, var(--color-primary2), transparent 98.1%);
 }
 header:hover {
-  background: linear-gradient(-200deg, var(--color-primary2) 7.81%, hsl(0, 0%, 2%) 90.1%);
+  background: linear-gradient(-200deg, var(--color-primary2) 7.81%, var(--color-neutral1) 90.1%);
 }
 
 #nav-mobil {
@@ -183,7 +183,7 @@ header:hover {
   display: block;
   width: 35px;
   height: 3px;
-  background-color: var(--color-neutral2);
+  background-color: var(--color-secondary1);
   /*   margin: 20px 0;
  */
   transition: all 0.2s;
