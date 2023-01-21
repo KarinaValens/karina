@@ -17,7 +17,6 @@ const {show}= useContext(AppContext)
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name='keywords'content='portfolio frontend developer design '/>
       </Head>
-    <Header/>
     { show ?" ":  <main >
         <SkillsIcons/>
         <About/>

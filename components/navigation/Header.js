@@ -2,14 +2,25 @@ import Nav from "./Nav"
 import { motion } from "framer-motion"
 import { useContext, useState } from "react"
 import { AppContext } from "../context/AppContext"
+import { useRouter } from "next/router";
 
 export default function Header() {
   const { skillsAnim, show } = useContext(AppContext);
 
+  const router=useRouter()
+  /* I am using the useRoute and the router.pathname ==="/"  in order tho show the hero section
+  on the index and hide it on the other pages
+  the show ternary operator hide the content whent the nav is open */
+
+
   return (
     <header>
-    
-      {show ? " " : <div id="karina-pitch" style={{backgroundImage: 'url(/media/images/KarinaValens.png)'}}>
+      <Nav/>
+      {show ? null:( 
+    <div>
+      {router.pathname ==="/" ? 
+      <>
+      <div id="karina-pitch" style={{backgroundImage: 'url(/media/images/KarinaValens.png)'}}>
         <motion.h2
           className="skills"
           id="ux_ui"
@@ -46,7 +57,10 @@ export default function Header() {
           <span id="last-name"> V<span id="letter-a">a</span>lens </span>
         </h1>
       </div>
-        </div>}
+        </div>
+        </> : null}
+        </div>)
+        }
 
         
       </header>

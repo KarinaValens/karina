@@ -4,8 +4,13 @@ export const AppContext= createContext()
 
 
 export default function AppContextProvider(props) {
-/* navigation menu */
+/* navigation menu burguer menu open*/
 const [show, setShow]= useState(false)
+
+/* menu bar opening and close each menu */
+
+/* const [menuOpen, setMenuOpen ]=useState(false) */
+
 /* skills animations */
 const skillsAnim ={
     hidden:{
@@ -18,17 +23,7 @@ const skillsAnim ={
         scale: [0, 1.5 ,  0],
            },
 }
-  /* creating stage for the projects */
-/*   const [projects, setProjects]=useState([])
- */
-  /* fetchin projects */
-    /* useEffect(()=>{
-    async function  loadProjects() {
-        const res = await fetch('/api/');
-        const projectsData = await res.json();
-        setProjects(projectsData);}
-        loadProjects();//calling the loadProjects function
-  },[]) */
+
 
 const value = {show, setShow, skillsAnim}
 

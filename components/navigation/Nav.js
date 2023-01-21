@@ -15,11 +15,11 @@ const {show} = useContext(AppContext)
          <Anchor href={"/"}><Image  src={"/media/images/logo.png"} width={50} height={50} alt="logo" sizes="(max-width: 700px) 100vw, 700px"/></Anchor>
          <Burguer/>
         </div>
-         {show ? <ul className="menus flex">
-            <Anchor  href={"/"}>HOME</Anchor>
-            <Anchor  href={"/projects"}>PROJECTS</Anchor>
-            <Anchor  href={"/about"}>ABOUT</Anchor>
-        </ul>:  false}        
+         {show ? <ul className="menus flex"> 
+            <Anchor href={"/"}>HOME</Anchor>
+            <Anchor href={"/projects"}>PROJECTS</Anchor>
+{/*             <Anchor  onClick={()=>setShow(!show)} href={"/about"}>ABOUT</Anchor>
+ */}        </ul>:  false}        
         
     </nav>   
     
