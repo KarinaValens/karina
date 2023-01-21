@@ -9,6 +9,7 @@ import { projects } from '../api/projects'
 
 export default function Projects() {
   
+  
  const {show }=useContext(AppContext)
  const router = useRouter();
  const {name} = router.query;  
@@ -62,3 +63,20 @@ export default function Projects() {
   )
 }
 
+// pages/posts/[id].js
+
+// Generates `/posts/1` and `/posts/2`
+export async function getStaticPaths() {
+  return {
+    paths:   [{ params: { name: 'Colors-&-Animations' } }, { params: { name: 'Sleepy-Baby' }}  , { params: { name: 'Solomon-Sound-Therapy' } } , { params: { name: 'Hack-Hogwarts-Student-List' } }]/* {params: {name: 'Colors-&-Animations'}} */,
+    fallback: false, // can also be true or 'blocking'
+  }
+}
+
+// `getStaticPaths` requires using `getStaticProps`
+export async function getStaticProps(context) {
+  return {
+    // Passed to the page component as props
+    props: { project: {} },
+  }
+}

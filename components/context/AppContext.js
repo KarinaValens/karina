@@ -30,7 +30,7 @@ const skillsAnim ={
         loadProjects();//calling the loadProjects function
   },[]) */
 
-const value = {show, setShow, skillsAnim, projects}
+const value = {show, setShow, skillsAnim}
 
   return (
     <AppContext.Provider value={value}>
