@@ -148,25 +148,22 @@ header,
 footer {
   position: relative;
   background: linear-gradient(135deg, var(--color-neutral1) 25%, var(--color-primary2));
-  transition-property: background-color;
   transition-duration: 500ms;
-  transition-timing-function: cubic-bezier(0.1, 0.4, 0.5, 0.1);
   margin-bottom: 0;
 }
 
-nav {
+nav,
+footer {
   background: linear-gradient(150deg, var(--color-accent2) 1%, hsl(0, 0%, 1%) 98.1%);
 }
-header:hover,
-nav:hover,
-footer {
+header:hover {
   background: linear-gradient(-200deg, var(--color-primary2) 7.81%, hsl(0, 0%, 2%) 90.1%);
 }
 
 #nav-mobil {
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.5rem 0;
+  padding: 1rem 1.5rem;
 }
 
 #burger-button {

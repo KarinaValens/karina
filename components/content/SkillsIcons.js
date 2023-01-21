@@ -22,7 +22,7 @@ export default function SkillsIcons() {
     <div className='flex-column'>
        <a className='credits' href="https://www.flaticon.com/free-icons/color-palette" title="color palette icons"> icons created by Muhammad Ali </a>
        <a className='credits' href="https://www.flaticon.com/free-icons/react" title="react icons">React icon created by Dreamstale - Flaticon </a>
-      </div>
+    </div>
 </section>
   )
 }
