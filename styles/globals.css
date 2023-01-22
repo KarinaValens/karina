@@ -182,8 +182,6 @@ header:hover {
   width: 35px;
   height: 3px;
   background-color: var(--color-secondary1);
-  /*   margin: 20px 0;
- */
   transition: all 0.2s;
   transform-origin: 50% 50%;
 }
@@ -215,11 +213,9 @@ header:hover {
 
 .menus {
   flex-direction: column;
-  height: 75vh;
+  height: 72vh;
   gap: 4rem;
   margin-bottom: 0;
-  /* animating the navigation bar */
-  transition: transform 1s;
   padding: 4rem;
   font: 1.3rem var(--font-headings);
 }

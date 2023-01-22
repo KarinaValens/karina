@@ -1,4 +1,4 @@
-import {createContext, useEffect, useState} from 'react'
+import {createContext,  useState} from 'react'
 
 export const AppContext= createContext()
 
@@ -7,9 +7,7 @@ export default function AppContextProvider(props) {
 /* navigation menu burguer menu open*/
 const [show, setShow]= useState(false)
 
-/* menu bar opening and close each menu */
 
-/* const [menuOpen, setMenuOpen ]=useState(false) */
 
 /* skills animations */
 const skillsAnim ={
