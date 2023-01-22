@@ -35,38 +35,39 @@ export default function Projects() {
           <p>{project.description}</p>
 
           <div className="center flex">
-            <motion.div className="flex" initial={{ x: "-100vw" }} animate={{ x: 0 }}>
+            <motion.div className="flex" initial={{ x: "-100vw" }} animate={{ x: 0 }} transition={{ delay: 1.5, duration: 2 }}>
               <div className=" picture-container">
                 <Image src={project.image} alt={project.image} fill sizes="(max-width: 700px) 100vw, 700px" />
               </div>
               <p>{project.detail}</p>
             </motion.div>
 
-            <motion.div className="flex" initial={{ x: "500vw" }} animate={{ x: 0 }}>
+            <motion.div className="flex" initial={{ x: "500vw" }} animate={{ x: 0 }} transition={{ delay: 1.5, duration: 2 }}>
               <div className=" picture-container">
                 <Image src={project.image2} alt={project.image2} fill sizes="(max-width: 700px) 100vw, 700px" />{" "}
               </div>
               <p>{project.detail2}</p>
             </motion.div>
 
-            <motion.div className="flex" initial={{ x: "-100vw" }} animate={{ x: 0 }}>
+            <motion.div className="flex" initial={{ x: "-100vw" }} animate={{ x: 0 }} transition={{ delay: 1.5, duration: 2 }}>
               <div className=" picture-container">
-                <Image src={project.image3} alt={project.image3} fill sizes="(max-width: 700px) 100vw, 700px" />{" "}
+                <Image src={project.image3} alt={project.image3} fill sizes="(max-width: 700px) 100vw, 700px" />
               </div>
               <p>{project.detail3}</p>
             </motion.div>
           </div>
-
-          <Link className="glass-effec link link-site" href={project.url} target="-blank">
-            Visit Site
-          </Link>
+          <div className="link-site-container">
+            <Link className="glass-effec link " href={project.url} target="-blank">
+              Visit Site
+            </Link>
+          </div>
         </div>
       )}
     </>
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(contex) {
   return {
     //Passed to the page component as props
     props: { project: {} },
