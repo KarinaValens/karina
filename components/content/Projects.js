@@ -18,7 +18,7 @@ export default function Projects() {
                   <Image src={project.projectimg} alt={project.name} fill sizes="(max-width: 700px) 100vw, 700px" />
                 </div>
                 <Link className="glass-effect link" href={`projects/${project.name}`}>
-                  {project.name}
+                  {project.title}
                 </Link>
               </div>
             );

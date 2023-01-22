@@ -20,7 +20,7 @@ export default function ProjectList() {
                 <div key={project.id} className="center flex glass-effect">
                   <Image src={project.projectimg} alt={project.name} width="250" height="150" sizes="(max-width: 700px) 100vw, 700px" />
                   <Link className="glass-effec link" href={`projects/${project.name}`}>
-                    {project.name}
+                    {project.title}
                   </Link>
                 </div>
               );

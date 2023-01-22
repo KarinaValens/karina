@@ -108,6 +108,7 @@ img {
 .flex {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 .flex-column {
   display: flex;
@@ -358,6 +359,7 @@ footer {
 /* -------------------- // PROJECT PAGE // ----------------------------- */
 .single-project-container {
   padding-bottom: 3rem;
+  align-items: center;
 }
 
 .single-project-container h2 {
@@ -369,9 +371,14 @@ footer {
 .mockup {
   width: 70%;
 }
+
+.project-img-container {
+  width: 50%;
+  aspect-ratio: 1 / 1.1;
+}
 .single-project-container p {
   display: inline-block;
-  flex: 1 1 209px;
+  flex: 1 1 35%;
   margin: 2rem;
 }
 
