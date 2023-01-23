@@ -20,15 +20,15 @@ export default function Header() {
           {router.pathname === "/" ? (
             <>
               <div id="karina-pitch" style={{ backgroundImage: "url(/media/images/KarinaValens.png)" }}>
-                <motion.h2 className="skills" id="ux_ui" variants={skillsAnim} initial="hidden" animate="visible" transition={{ delay: 3, duration: 10, repeat: Infinity, repeatDelay: 4 }}>
+                <motion.h2 className="skills" id="ux_ui" variants={skillsAnim} initial="hidden" animate="visible" transition={{ duration: 10, repeat: Infinity, repeatDelay: 4 }}>
                   UX/UI DESIGNER
                 </motion.h2>
 
-                <motion.h2 className="skills" id="front_end" variants={skillsAnim} initial="hidden" animate="visible" transition={{ delay: 10, duration: 10, repeat: Infinity, repeatDelay: 4 }}>
+                <motion.h2 className="skills" id="front_end" variants={skillsAnim} initial="hidden" animate="visible" transition={{ delay: 5, duration: 10, repeat: Infinity, repeatDelay: 4 }}>
                   FRONTEND DEVELOPER
                 </motion.h2>
 
-                <motion.h2 className="skills" id="mult_designer" variants={skillsAnim} initial="hidden" animate="visible" transition={{ delay: 17, duration: 10, repeat: Infinity, repeatDelay: 4 }}>
+                <motion.h2 className="skills" id="mult_designer" variants={skillsAnim} initial="hidden" animate="visible" transition={{ delay: 10, duration: 10, repeat: Infinity, repeatDelay: 4 }}>
                   MULTIMEDIA DESIGNER
                 </motion.h2>
 
