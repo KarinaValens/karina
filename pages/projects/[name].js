@@ -33,21 +33,21 @@ export default function Projects() {
           <p>{project.description}</p>
 
           <div className="center flex">
-            <motion.div className="flex" initial={{ x: "-100vw" }} animate={{ x: 0 }} transition={{ delay: 1.5, duration: 2 }}>
+            <motion.div className="flex" initial={{ x: "-100vw" }} animate={{ x: 0 }} transition={{ delay: 0.5, duration: 5, type: "spring", stiffness: 100 }}>
               <div className=" picture-container project-img-container">
                 <Image src={project.image} alt={project.image} fill sizes="(max-width: 700px) 100vw, 700px" />
               </div>
               <p>{project.detail}</p>
             </motion.div>
 
-            <motion.div className="flex" initial={{ x: "500vw" }} animate={{ x: 0 }} transition={{ delay: 1.5, duration: 2 }}>
+            <motion.div className="flex" initial={{ x: "200vw" }} animate={{ x: 0 }} transition={{ delay: 2, duration: 5, type: "spring", stiffness: 100 }}>
               <div className=" picture-container project-img-container">
                 <Image src={project.image2} alt={project.image2} fill sizes="(max-width: 700px) 100vw, 700px" />{" "}
               </div>
               <p>{project.detail2}</p>
             </motion.div>
 
-            <motion.div className="flex" initial={{ x: "-100vw" }} animate={{ x: 0 }} transition={{ delay: 1.5, duration: 2 }}>
+            <motion.div className="flex" initial={{ x: "-100vw" }} animate={{ x: 0 }} transition={{ delay: 3.5, duration: 5, type: "spring", stiffness: 100 }}>
               <div className=" picture-container project-img-container">
                 <Image src={project.image3} alt={project.image3} fill sizes="(max-width: 700px) 100vw, 700px" />
               </div>
