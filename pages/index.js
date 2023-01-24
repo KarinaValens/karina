@@ -4,10 +4,9 @@ import About from "../components/content/About";
 import Projects from "../components/content/Projects";
 import SkillsIcons from "../components/content/SkillsIcons";
 import { AppContext } from "../components/context/AppContext";
-import Header from "../components/navigation/Header";
 
 export default function Home() {
-  const { show } = useContext(AppContext);
+  const { show, aboutParentAnim } = useContext(AppContext);
   return (
     <>
       <Head>

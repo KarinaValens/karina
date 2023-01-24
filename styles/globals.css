@@ -301,7 +301,7 @@ header:hover {
 }
 
 .credits {
-  font-size: xx-small;
+  font-size: 0.3rem;
 }
 .icon-container {
   border: 1px solid var(--color-primary1);
