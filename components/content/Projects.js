@@ -5,11 +5,12 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 export default function Projects() {
-  const [container, setContainer] = useState();
-
+  /*  const [container, setContainer] = useState();
+  const [item, setItem] = useState(); */
+  /* 
   useMemo(() => {
     const containerValue = {
-      hidden: { opacity: 0, scale: 0 },
+      hidden: { opacity: 1, scale: 0 },
       visible: {
         opacity: 1,
         scale: 1,
@@ -20,35 +21,40 @@ export default function Projects() {
       },
     };
     return setContainer(containerValue);
-  }, []);
+  }, []); */
 
-  const item = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-    },
-  };
+  /* useMemo(() => {
+    const itemValue = {
+      hidden: { y: 20, opacity: 0 },
+      visible: {
+        y: 0,
+        opacity: 1,
+      },
+    };
+    return setItem(itemValue);
+  }, []); */
 
   const projectArt = useRef(null);
   const projectIsInView = useInView(projectArt, { threshold: 1 });
+  const itemAnim = useAnimation();
   const projectAnim = useAnimation();
 
   useEffect(() => {
     console.log("element is", projectIsInView);
     if (projectIsInView) {
-      projectAnim.start({ container });
+      projectAnim.start({ opacity: [1, 1], scale: [0, 1], transition: { type: "spring", duration: 1.5, bounce: 0.3 } });
+      itemAnim.start({ opacity: [0, 1], y: [20, 0] });
     }
-  }, [projectIsInView, projectAnim, container]);
+  }, [projectIsInView, projectAnim, itemAnim]);
 
   return (
     <>
       <motion.article className="projects" ref={projectArt}>
         <h2 className="sub-title ">Projects</h2>
-        <motion.div className="grid" variants={projectAnim} initial="hidden" animate="visible">
+        <motion.div className="grid" variants={projectAnim} initial="hidden" animate={projectAnim}>
           {projects.map((project) => {
             return (
-              <motion.div key={project.id} className="center flex glass-effect" variants={item}>
+              <motion.div key={project.id} className="center flex glass-effect" variants={itemAnim}>
                 <div className="picture-container">
                   <Image src={project.projectimg} alt={project.name} fill sizes="(max-width: 700px) 100vw, 700px" />
                 </div>
