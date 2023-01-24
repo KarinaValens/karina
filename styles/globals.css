@@ -3,7 +3,7 @@
   --color-primary2: hsla(251, 98%, 47%, 0.74);
   --color-gradient-prim-black: linear-gradient(135deg, var(--color-neutral1) 25%, var(--color-primary2));
 
-  --color-secondary1: hsl(248, 86%, 54%);
+  --color-secondary1: rgba(116, 93, 207, 0.831);
   --color-secondary2: hsl(29, 88%, 68%);
 
   --color-bg-glass-effect: hsla(0, 38%, 95%, 0.07);
@@ -30,7 +30,7 @@
     --color-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     --bg-img: url(/media/images/circle_scatter_haikei_dark.svg) repeat top;
 
-    --color-secondary1: hsl(231deg 73% 77%);
+    --color-secondary1: rgb(196, 65, 236);
     --color-secondary2: hsl(29, 78%, 78%);
 
     --color-accent1: hsl(17, 72%, 55%);
@@ -135,6 +135,11 @@ img {
   box-shadow: var(--color-box-shadow);
   color: var(--color-secondary1);
   font-weight: bold;
+}
+.link:hover,
+.link:active {
+  background-color: var(--color-secondary1);
+  color: var(--color-primary2);
 }
 
 .sub-title {
@@ -340,6 +345,7 @@ header:hover {
 }
 .projects {
   background: var(--bg-img);
+  position: relative;
   padding: 1rem 0 3rem;
 }
 /* -------------------- // FOOTER// --------------------------- */
@@ -382,9 +388,9 @@ footer {
 }
 
 .link-site-container {
+  border: 1px solid var(--color-primary1);
   margin-top: 2rem;
   width: 20rem;
-  aspect-ratio: 1/1.1;
   margin: auto;
 }
 
