@@ -5,35 +5,6 @@ import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 export default function Projects() {
-  /*  const [container, setContainer] = useState();
-  const [item, setItem] = useState(); */
-  /* 
-  useMemo(() => {
-    const containerValue = {
-      hidden: { opacity: 1, scale: 0 },
-      visible: {
-        opacity: 1,
-        scale: 1,
-        transition: {
-          delayChildren: 1,
-          staggerChildren: 0.2,
-        },
-      },
-    };
-    return setContainer(containerValue);
-  }, []); */
-
-  /* useMemo(() => {
-    const itemValue = {
-      hidden: { y: 20, opacity: 0 },
-      visible: {
-        y: 0,
-        opacity: 1,
-      },
-    };
-    return setItem(itemValue);
-  }, []); */
-
   const projectArt = useRef(null);
   const projectIsInView = useInView(projectArt, { threshold: 1 });
   const itemAnim = useAnimation();
@@ -42,7 +13,7 @@ export default function Projects() {
   useEffect(() => {
     console.log("element is", projectIsInView);
     if (projectIsInView) {
-      projectAnim.start({ opacity: [1, 1], scale: [0, 1], transition: { type: "spring", duration: 1.5, bounce: 0.3 } });
+      projectAnim.start({ opacity: [1, 1], scale: [0, 1], transition: { type: "spring", duration: 1.5, bounce: 0.3, delayChildren: 0.3, staggerChildren: 0.2 } });
       itemAnim.start({ opacity: [0, 1], y: [20, 0] });
     }
   }, [projectIsInView, projectAnim, itemAnim]);
