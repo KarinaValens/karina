@@ -279,17 +279,11 @@ header:hover {
   color: var(--color-primary1);
 }
 
-/* ------------------------------------ // Main // ------------------------------- */
-.main {
+main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  /*   min-height: 100vh;
- */
+  gap: 3rem;
 }
-
 /* ------------------ // Skills Icons // -------------- */
 
 #skills-section h2 {
@@ -373,6 +367,10 @@ footer {
   align-items: center;
 }
 
+.hero-project-single-page {
+  margin-bottom: 3rem;
+}
+
 .single-project-container h2 {
   width: 100%;
   margin: auto;
@@ -381,6 +379,10 @@ footer {
 }
 .mockup {
   width: 70%;
+}
+
+.project-div {
+  margin-bottom: 4rem;
 }
 
 .project-img-container {
@@ -410,7 +412,7 @@ footer {
 
   #about-container {
     grid-template-columns: 1fr 1fr;
-    max-width: 90%;
+    max-width: 80%;
     column-gap: 3rem;
     padding: 1rem;
   }
