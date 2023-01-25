@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 
 export default function About() {
   const aboutArt = useRef(null);
@@ -29,9 +30,9 @@ export default function About() {
       <motion.p id="presentation" animate={aboutAnimText}>
         Hi!! I am Karina. I love coding, knitting, making handmade soap and I love coffee! I really like to learn a lot of new things. In College, I studied Business, and I worked in that field for some years. When I moved to Denmark, I started
         learning a lot of cool stuff among them, coding!!! And there is where this amazing journey starts. Welcome to my portfolio !
-        {/*  <a href="./docs/Karina_Valens_CV.pdf" download target="_blank">
-          More...
-        </a> */}
+        <Link className="link" href="/media/docs/Karina-Valens_CV.pdf" download target="_blank">
+          Dowload Karina_CV
+        </Link>
       </motion.p>
     </motion.article>
   );
