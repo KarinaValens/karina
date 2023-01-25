@@ -27,9 +27,8 @@ export default function About() {
       </motion.div>
 
       <motion.p id="presentation" animate={aboutAnimText}>
-        Hi!! I am Karina. I love coding, knitting, making handmade soap and I love coffee! I really like to learn a lot of new things. Back in my country, Ecuador, I studied science in the high school Chemistry, Biology, Anatomy, Physics, well I
-        wasn`t really good at the last one. I was also into sports (now I really have to push myself to go to the gym := ). I tried to learn to play guitar and piano, that didn’t go so well, but I know how to sing, … kind of. In College, I studied
-        Business, and I worked in that field for some years. When I moved to Denmark, I started learning a lot of cool stuff among them, coding!!! And there is where this amazing journey starts. Welcome to my portfolio !
+        Hi!! I am Karina. I love coding, knitting, making handmade soap and I love coffee! I really like to learn a lot of new things. In College, I studied Business, and I worked in that field for some years. When I moved to Denmark, I started
+        learning a lot of cool stuff among them, coding!!! And there is where this amazing journey starts. Welcome to my portfolio !
         {/*  <a href="./docs/Karina_Valens_CV.pdf" download target="_blank">
           More...
         </a> */}
