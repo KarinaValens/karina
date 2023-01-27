@@ -11,10 +11,10 @@ export default function About() {
 
   useEffect(() => {
     if (aboutIsInView) {
-      aboutAnim.start({ x: ["50vw", "0vw"], transition: { type: "spring", duration: 1.5, bounce: 0.3 } });
+      aboutAnim.start({ x: ["50vw", "0vw"], transition: { type: "spring", duration: 2, bounce: 0.3 } });
     }
     if (aboutIsInView) {
-      aboutAnimText.start({ x: ["-50vw", "0vw"] });
+      aboutAnimText.start({ x: ["-50vw", "0vw"], transition: { type: "spring", duration: 2, bounce: 0.3 } });
     }
   }, [aboutAnim, aboutAnimText, aboutIsInView]);
 

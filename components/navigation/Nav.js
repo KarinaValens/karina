@@ -18,10 +18,14 @@ export default function Nav() {
         </div>
         {show ? (
           <ul className="menus flex">
-            <Anchor href={"/"}>HOME</Anchor>
-            <Anchor href={"/projects"}>PROJECTS</Anchor>
+            <Anchor className="single-menu" href={"/"}>
+              HOME
+            </Anchor>
+            <Anchor className="single-menu" href={"/projects"}>
+              PROJECTS
+            </Anchor>
             {/*             <Anchor  onClick={()=>setShow(!show)} href={"/about"}>ABOUT</Anchor>
-             */}{" "}
+             */}
           </ul>
         ) : (
           false

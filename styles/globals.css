@@ -220,10 +220,12 @@ header:hover {
 .menus {
   flex-direction: column;
   height: 72vh;
-  gap: 4rem;
   margin-bottom: 0;
   padding: 4rem;
   font: 1.3rem var(--font-headings);
+}
+.single-menu {
+  margin-bottom: 3rem;
 }
 
 /* ------------------- // Hero Section // ------------------ */
