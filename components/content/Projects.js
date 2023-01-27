@@ -34,7 +34,6 @@ export default function Projects() {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 2 },
     },
   };
 
