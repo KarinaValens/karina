@@ -1,22 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "../../pages/api/projects";
-import { motion, useAnimation, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 export default function Projects() {
-  /*  const projectArt = useRef(null);
-  const projectIsInView = useInView(projectArt, { threshold: 0.5 });
-  const projectAnim = useAnimation();
-  const itemAnim = useAnimation();
-
-  useEffect(() => {
-    if (projectIsInView) {
-      projectAnim.start({ opacity: [1, 1], scale: [0, 1], transition: { delayChildren: 0.9 }, staggerChildren: 0.6 });
-      itemAnim.start({ opacity: [0, 1], y: [5, 0], transition: { duration: 2 } });
-    }
-  }, [projectIsInView, projectAnim, itemAnim]); */
-
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -39,7 +26,7 @@ export default function Projects() {
 
   return (
     <>
-      <motion.article className="projects" initial={"hidden"} whileInView={"visible"} viewport={{ once: false }} transition={{ stagerChildren: 0.5 }} /* ref={projectArt} */>
+      <motion.article className="projects" initial={"hidden"} whileInView={"visible"} viewport={{ once: false }} transition={{ stagerChildren: 0.5 }}>
         <h2 className="sub-title ">Projects</h2>
         <motion.div className="grid" variants={container}>
           {projects.map((project) => {
