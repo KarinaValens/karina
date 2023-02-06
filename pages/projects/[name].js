@@ -74,10 +74,10 @@ export default function Projects() {
             </motion.div>
 
             <motion.div className="flex project-div" animate={projectDivAnim3}>
+              <p>{project.detail3}</p>
               <div className=" picture-container project-img-container">
                 <Image src={project.image3} alt={project.image3} fill sizes="(max-width: 700px) 100vw, 700px" />
               </div>
-              <p>{project.detail3}</p>
             </motion.div>
           </div>
           <div className="link-site-container">

@@ -55,7 +55,7 @@ export const projects = [
   {
     id: "4",
     name: "Hack-Hogwarts-Student-List",
-    title: "Hack-Hogwarts-Student-List",
+    title: "Hack Hogwarts Student List",
     projectimg: "/media/projects/Hack_Hogwarts_Student_list/hogwarts_student_list_final.webp",
     description:
       "The goal of this assignment was working and manipulating data for given Rest APIs, in vanilla JavaScript. Implementing several functionalities like sorting, filter, and search under certain conditions. String manipulation, array manipulation, design, animation, etc. were part of this project",
@@ -70,4 +70,23 @@ export const projects = [
     detail3: "I implemented some animations as visual feedback for the user, for example when a student is expelled the information of the student is retired from the interface entirely with an animation",
     url: "https://karinavalens.github.io/Hacked_Hogwarts_Student_List",
   },
+  /* ,
+  {
+    id: "5",
+    name: "Cosmo-Festival",
+    title: "Cosmo-Festival",
+    projectimg: "/media/projects/Hack_Hogwarts_Student_list/hogwarts_student_list_final.webp",
+    description:
+      "The goal of this assignment was working and manipulating data for given Rest APIs, in vanilla JavaScript. Implementing several functionalities like sorting, filter, and search under certain conditions. String manipulation, array manipulation, design, animation, etc. were part of this project",
+    mockup: "/media/projects/Hack_Hogwarts_Student_list/hogwarts_student_list_mockup.webp",
+    image: "/media/projects/Hack_Hogwarts_Student_list/hogwarts_student_list.webp",
+    detail:
+      'I designed and developed the project under given requieres. Fonts wise; I used “Aladin", cursive; for titles in order to get as close as possible as the fonts used in Harry Potter universe. I used  “Cormorant Garamond”, serif; in the buttons in order to make them more readable yet interesting. The rest of the list I left is the default Times New Roman because it is readable even in small sizes. For the most part I stick with the colors of each Hogwarts house but also kept the dark theme that is characteristic in the Harry Potter movies. I decided to display the interface as a table because of the among of students in the list, the requirements of selecting prefects, blood status, etc. and because the sorting and filtering function could be seen more aesthetically.',
+    image2: "/media/projects/Hack_Hogwarts_Student_list/hogwarts_student_list_studentpop.webp",
+    detail2:
+      "I decided to make several pop-ups in order to communicate to the user what was happening in the list. The hacking attact starts when the user press the keyboard Del. When that happens my own name and information is injected in the list, the administrator (user) can’t expel me, the user can not  choose squad members anymore because they are deleted after some seconds, the blood status is assigned randomly. The list returns to its original state after reloading the page.",
+    image3: "/media/projects/Hack_Hogwarts_Student_list/hogwarts_student_list_modal.webp",
+    detail3: "I implemented some animations as visual feedback for the user, for example when a student is expelled the information of the student is retired from the interface entirely with an animation",
+    url: "https://karinavalens.github.io/Hacked_Hogwarts_Student_List",
+  }, */
 ];
