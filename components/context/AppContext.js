@@ -1,7 +1,4 @@
 import { createContext, useState } from "react";
-import { useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
-import { useAnimation } from "framer-motion";
 
 export const AppContext = createContext();
 
@@ -22,9 +19,7 @@ export default function AppContextProvider(props) {
     },
   };
 
- 
-
-  const value = { show, setShow, skillsAnim};
+  const value = { show, setShow, skillsAnim };
 
   return <AppContext.Provider value={value}>{props.children}</AppContext.Provider>;
 }

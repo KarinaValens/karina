@@ -24,8 +24,6 @@ export default function Nav() {
             <Anchor className="single-menu" href={"/projects"}>
               PROJECTS
             </Anchor>
-            {/*             <Anchor  onClick={()=>setShow(!show)} href={"/about"}>ABOUT</Anchor>
-             */}
           </ul>
         ) : (
           false

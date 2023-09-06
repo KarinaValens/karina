@@ -31,7 +31,7 @@ export default function About() {
         Hi!! I am Karina. I love coding, knitting, making handmade soap and I love coffee! I really like to learn a lot of new things. In College, I studied Business, and I worked in that field for some years. When I moved to Denmark, I started
         learning a lot of cool stuff among them, coding!!! And there is where this amazing journey starts. Welcome to my portfolio !
         <Link className="link" href="/media/docs/Karina-Valens_CV.pdf" download target="_blank">
-          Dowload Karina_CV
+          Download Karina_CV
         </Link>
       </motion.p>
     </motion.article>
