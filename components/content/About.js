@@ -28,8 +28,7 @@ export default function About() {
       </motion.div>
 
       <motion.p id="presentation" animate={aboutAnimText}>
-        Hi!! I am Karina. I love coding, knitting, making handmade soap and I love coffee! I really like to learn a lot of new things. In College, I studied Business, and I worked in that field for some years. When I moved to Denmark, I started
-        learning a lot of cool stuff among them, coding!!! And there is where this amazing journey starts. Welcome to my portfolio !
+        I&apos;m a passionate frontend developer with hands-on backend experience, driven by building real products that solve everyday problems — the small, annoying things that take too much of our time. I have a background in UI/UX design, and I&apos;m constantly working to sharpen my eye for detail. I thrive on projects I believe in, and I&apos;m always looking to grow by taking on new challenges.
         <Link className="link" href="/media/docs/Karina-Valens_CV.pdf" download target="_blank">
           Download Karina_CV
         </Link>

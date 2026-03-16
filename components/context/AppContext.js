@@ -11,11 +11,14 @@ export default function AppContextProvider(props) {
     hidden: {
       x: 0,
       y: 0,
+      scale: 0,
+      opacity: 0,
     },
     visible: {
       x: "80vw",
       y: ["0vh", "10vh", "0vh"],
       scale: [0, 1.5, 0],
+      opacity: [0, 1, 0],
     },
   };
 

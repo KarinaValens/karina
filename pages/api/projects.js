@@ -1,5 +1,25 @@
 export const projects = [
   {
+    id: "5",
+    name: "WithHomeTaste",
+    title: "With Home Taste",
+    projectimg: "/media/projects/WithHomeTaste/wht_home.jpg",
+    description:
+      "A mobile recipe app built with React Native and Expo. Users can save recipes by scanning a cookbook photo, importing from a URL, or adding manually. Features include AI-powered recipe extraction, a shopping list, recipe search, and ingredient-based suggestions. Backend powered by Supabase with Edge Functions.",
+    mockup: "/media/projects/WithHomeTaste/wht_home.jpg",
+    image: "/media/projects/WithHomeTaste/wht_recipe_list.jpg",
+    detail:
+      "The app lets users build their personal recipe collection. Recipes can be browsed, searched by name, or filtered by favorites. Each recipe card shows the photo, category, cooking time, and ingredient count.",
+    image2: "/media/projects/WithHomeTaste/wht_add_recipe.jpg",
+    detail2:
+      "Adding recipes is flexible: scan a photo from a cookbook using AI-powered text extraction, import directly from a recipe website URL, or type it in manually. The AI handles parsing ingredients, steps, and metadata automatically.",
+    image3: "/media/projects/WithHomeTaste/wht_shopping_list.jpg",
+    detail3:
+      "The integrated shopping list lets users add ingredients directly from any recipe. Items can be checked off while shopping, and manual items can be added too. Built to make the trip from recipe to store seamless.",
+    url: "",
+    tech: "React Native, Expo, Supabase, Edge Functions, OpenAI API",
+  },
+  {
     id: "1",
     name: "Colors-&-Animations",
     title: "Colors & Animations",
