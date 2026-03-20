@@ -1,43 +1,60 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useContext } from "react";
+import { useContext, useState, useEffect, useCallback } from "react";
 import { AppContext } from "../../components/context/AppContext";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "../api/projects";
 
-const fadeInLeft = {
-  hidden: { x: -30, opacity: 0 },
-  visible: {
+const slideVariants = {
+  enter: (direction) => ({
+    x: direction > 0 ? 300 : -300,
+    opacity: 0,
+  }),
+  center: {
     x: 0,
     opacity: 1,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.4, ease: "easeOut" },
   },
-};
-
-const fadeInRight = {
-  hidden: { x: 30, opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: { duration: 0.6, ease: "easeOut" },
-  },
-};
-
-const fadeIn = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { duration: 0.6, ease: "easeOut" },
-  },
+  exit: (direction) => ({
+    x: direction > 0 ? -300 : 300,
+    opacity: 0,
+    transition: { duration: 0.3, ease: "easeIn" },
+  }),
 };
 
 export default function Projects() {
   const { show } = useContext(AppContext);
   const router = useRouter();
   const { name } = router.query;
+  const [[activeSlide, direction], setActiveSlide] = useState([0, 0]);
 
   const project = projects.find((project) => project.name === name);
+
+  const slides = [
+    { image: project.mockup, text: null },
+    { image: project.image, text: project.detail },
+    { image: project.image2, text: project.detail2 },
+    { image: project.image3, text: project.detail3 },
+  ];
+
+  const paginate = useCallback((newDirection) => {
+    setActiveSlide(([prev]) => {
+      const next = prev + newDirection;
+      if (next >= 0 && next < slides.length) {
+        return [next, newDirection];
+      }
+      if (next >= slides.length) {
+        return [0, 1];
+      }
+      return [prev, 0];
+    });
+  }, [slides.length]);
+
+  useEffect(() => {
+    const timer = setInterval(() => paginate(1), 5000);
+    return () => clearInterval(timer);
+  }, [paginate]);
 
   return (
     <>
@@ -46,59 +63,64 @@ export default function Projects() {
       ) : (
         <div key={project.id} className="single-project-container">
           <h2 className="sub-title">{project.title}</h2>
+          <p className="project-description">{project.description}</p>
 
-          <motion.div
-            className="hero-project-single-page"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
-          >
-            <motion.div className="picture-container mockup" variants={fadeIn}>
-              <Image
-                src={project.mockup}
-                alt={project.title}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          <div className="carousel-wrapper">
+            <button
+              className="carousel-btn carousel-btn-left"
+              onClick={() => paginate(-1)}
+              disabled={activeSlide === 0}
+              aria-label="Previous slide"
+            >
+              &#8249;
+            </button>
+
+            <div className="carousel-viewport">
+              <AnimatePresence initial={false} custom={direction} mode="wait">
+                <motion.div
+                  key={activeSlide}
+                  className={`carousel-slide ${slides[activeSlide].text ? "has-text" : ""}`}
+                  custom={direction}
+                  variants={slideVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                >
+                  <div className="carousel-image-container">
+                    <Image
+                      src={slides[activeSlide].image}
+                      alt={project.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 900px"
+                    />
+                  </div>
+                  {slides[activeSlide].text && (
+                    <p className="carousel-text">{slides[activeSlide].text}</p>
+                  )}
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            <button
+              className="carousel-btn carousel-btn-right"
+              onClick={() => paginate(1)}
+              disabled={activeSlide === slides.length - 1}
+              aria-label="Next slide"
+            >
+              &#8250;
+            </button>
+          </div>
+
+          <div className="carousel-dots">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                className={`carousel-dot ${i === activeSlide ? "active" : ""}`}
+                onClick={() => setActiveSlide([i, i > activeSlide ? 1 : -1])}
+                aria-label={`Go to slide ${i + 1}`}
               />
-            </motion.div>
-            <motion.p variants={fadeIn}>{project.description}</motion.p>
-          </motion.div>
-
-          <motion.div
-            className="project-div"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
-          >
-            <motion.div className="picture-container project-img-container" variants={fadeInLeft}>
-              <Image src={project.image} alt={project.title} fill sizes="(max-width: 700px) 100vw, 700px" />
-            </motion.div>
-            <motion.p variants={fadeInRight}>{project.detail}</motion.p>
-          </motion.div>
-
-          <motion.div
-            className="project-div"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
-          >
-            <motion.div className="picture-container project-img-container" variants={fadeInRight}>
-              <Image src={project.image2} alt={project.title} fill sizes="(max-width: 700px) 100vw, 700px" />
-            </motion.div>
-            <motion.p variants={fadeInLeft}>{project.detail2}</motion.p>
-          </motion.div>
-
-          <motion.div
-            className="project-div"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
-          >
-            <motion.p variants={fadeInLeft}>{project.detail3}</motion.p>
-            <motion.div className="picture-container project-img-container" variants={fadeInRight}>
-              <Image src={project.image3} alt={project.title} fill sizes="(max-width: 700px) 100vw, 700px" />
-            </motion.div>
-          </motion.div>
+            ))}
+          </div>
 
           {project.url && (
             <div className="link-site-container">

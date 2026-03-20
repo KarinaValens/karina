@@ -1,7 +1,12 @@
 import Image from "next/image";
 import Anchor from "./Anchor";
+import { useRouter } from "next/router";
 
 export default function Footer() {
+  const router = useRouter();
+
+  if (router.pathname === "/") return null;
+
   return (
     <footer className="flex">
       <Anchor href="/">
