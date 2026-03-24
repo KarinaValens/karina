@@ -65,23 +65,23 @@ export const projects = [
     year: "2022",
     role: "Developer (Team of 4)",
     tech: ["Next.js", "React", "CSS", "REST API", "Supabase"],
-    projectimg: "/media/projects/Cosmo_Festival/mockup.webp",
+    projectimg: "/media/projects/Cosmo_Festival/mockup.png",
     description:
       "A full-stack festival booking app. Browse the lineup across three stages, filter by day or genre, explore band details, and complete a full ticket booking flow with accommodation, tent rental, and checkout.",
-    mockup: "/media/projects/Cosmo_Festival/mockup.webp",
+    mockup: "/media/projects/Cosmo_Festival/mockup.png",
     url: "https://cosmosfestival.netlify.app/",
     github: "https://github.com/KarinaValens/cosmos-festival",
     sections: [
       {
-        image: "/media/projects/Cosmo_Festival/schedule.webp",
+        image: "/media/projects/Cosmo_Festival/schedule.png",
         text: "The schedule viewer displays acts across three Norse-themed stages — Midgard, Vanaheim, and Jotunheim — with day filtering and band search. Each act links to a detail page with bio, members, and genre.",
       },
       {
-        image: "/media/projects/Cosmo_Festival/booking.webp",
+        image: "/media/projects/Cosmo_Festival/booking.png",
         text: "The booking flow lets users pick regular or VIP tickets, choose from five camping areas with real-time availability, and optionally rent tents. A dynamic shopping cart calculates totals including booking fees.",
       },
       {
-        image: "/media/projects/Cosmo_Festival/checkout.webp",
+        image: "/media/projects/Cosmo_Festival/checkout.png",
         text: "After confirming a reservation, a 5-minute countdown timer starts. Users fill in ticket holder info, then proceed to payment. The entire checkout state is managed through React Context.",
       },
     ],
@@ -94,23 +94,23 @@ export const projects = [
     year: "2023",
     role: "Solo Developer & Designer",
     tech: ["Next.js", "React", "Framer Motion", "Mailchimp", "REST API"],
-    projectimg: "/media/projects/Better_Sites/mockup.webp",
+    projectimg: "/media/projects/Better_Sites/mockup.png",
     description:
       "A marketing website for a web design agency offering fully managed website subscriptions. Features animated UI, tiered pricing with checkout, a portfolio showcase, and newsletter integration.",
-    mockup: "/media/projects/Better_Sites/mockup.webp",
+    mockup: "/media/projects/Better_Sites/mockup.png",
     url: "",
-    github: "https://github.com/KarinaValens/better-sites-improved",
+    github: "https://github.com/KarinaValens/better-sites",
     sections: [
       {
-        image: "/media/projects/Better_Sites/services.webp",
+        image: "/media/projects/Better_Sites/services.png",
         text: "The services page features animated cards with hover effects built in Framer Motion, showcasing what the agency offers — from hassle-free hosting to SEO optimization and conversion-focused design.",
       },
       {
-        image: "/media/projects/Better_Sites/pricing.webp",
+        image: "/media/projects/Better_Sites/pricing.png",
         text: "Three pricing tiers (Basic, Popular, Pro) with a full checkout flow. Users select a package, fill in payment details, and receive an order confirmation — all managed through React Context state.",
       },
       {
-        image: "/media/projects/Better_Sites/process.webp",
+        image: "/media/projects/Better_Sites/process.png",
         text: "A 7-step visual walkthrough explaining the onboarding process — from sign-up to launch. Each step includes descriptive text and imagery to set client expectations.",
       },
     ],
@@ -123,19 +123,19 @@ export const projects = [
     year: "2023",
     role: "Solo Developer",
     tech: ["Next.js", "React", "REST API", "Restdb.io"],
-    projectimg: "/media/projects/Internship_Logbook/mockup.webp",
+    projectimg: "/media/projects/Internship_Logbook/mockup.png",
     description:
       "A web app documenting daily activities during my 10-week internship at SINOLAB, where I developed the DANGDI social media app using FlutterFlow. Built to present my work to KEA examiners in an interactive format.",
-    mockup: "/media/projects/Internship_Logbook/mockup.webp",
+    mockup: "/media/projects/Internship_Logbook/mockup.png",
     url: "",
     github: "https://github.com/KarinaValens/intership_logbook",
     sections: [
       {
-        image: "/media/projects/Internship_Logbook/entries.webp",
+        image: "/media/projects/Internship_Logbook/entries.png",
         text: "Daily entries are organized by month in a calendar view. Each entry includes activities, achievements, challenges, images, and source links — providing a complete picture of every day at the internship.",
       },
       {
-        image: "/media/projects/Internship_Logbook/detail.webp",
+        image: "/media/projects/Internship_Logbook/detail.png",
         text: "Individual entry pages break down the day into structured sections with an image carousel, making it easy for examiners to follow the progression of work throughout the internship.",
       },
     ],
