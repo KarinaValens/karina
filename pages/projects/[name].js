@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useContext, useState, useEffect, useCallback } from "react";
+import { useContext, useState } from "react";
 import { AppContext } from "../../components/context/AppContext";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "../api/projects";
@@ -23,48 +23,74 @@ const slideVariants = {
   }),
 };
 
-export default function Projects() {
+export default function ProjectDetail() {
   const { show } = useContext(AppContext);
   const router = useRouter();
   const { name } = router.query;
   const [[activeSlide, direction], setActiveSlide] = useState([0, 0]);
 
-  const project = projects.find((project) => project.name === name);
+  const project = projects.find((p) => p.name === name);
+  if (!project) return null;
 
   const slides = [
     { image: project.mockup, text: null },
-    { image: project.image, text: project.detail },
-    { image: project.image2, text: project.detail2 },
-    { image: project.image3, text: project.detail3 },
+    ...project.sections,
   ];
 
-  const paginate = useCallback((newDirection) => {
+  const paginate = (newDirection) => {
     setActiveSlide(([prev]) => {
       const next = prev + newDirection;
       if (next >= 0 && next < slides.length) {
         return [next, newDirection];
       }
-      if (next >= slides.length) {
-        return [0, 1];
-      }
       return [prev, 0];
     });
-  }, [slides.length]);
-
-  useEffect(() => {
-    const timer = setInterval(() => paginate(1), 5000);
-    return () => clearInterval(timer);
-  }, [paginate]);
+  };
 
   return (
     <>
       {show ? (
         " "
       ) : (
-        <div key={project.id} className="single-project-container">
-          <h2 className="sub-title">{project.title}</h2>
-          <p className="project-description">{project.description}</p>
+        <article className="project-detail">
+          <Link href="/projects" className="back-link">
+            &larr; All Projects
+          </Link>
 
+          {/* Title & Description */}
+          <motion.header
+            className="project-header"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h1 className="project-title">{project.title}</h1>
+            <span className="project-category">{project.category}</span>
+            <p className="project-description">{project.description}</p>
+          </motion.header>
+
+          {/* Metadata */}
+          <div className="project-meta">
+            <div className="meta-item">
+              <span className="meta-label">Year</span>
+              <span className="meta-value">{project.year}</span>
+            </div>
+            <div className="meta-item">
+              <span className="meta-label">Role</span>
+              <span className="meta-value">{project.role}</span>
+            </div>
+          </div>
+
+          {/* Tech Stack */}
+          <div className="project-tech">
+            {project.tech.map((t) => (
+              <span key={t} className="tech-tag">
+                {t}
+              </span>
+            ))}
+          </div>
+
+          {/* Carousel */}
           <div className="carousel-wrapper">
             <button
               className="carousel-btn carousel-btn-left"
@@ -89,9 +115,10 @@ export default function Projects() {
                   <div className="carousel-image-container">
                     <Image
                       src={slides[activeSlide].image}
-                      alt={project.title}
+                      alt={`${project.title} — slide ${activeSlide + 1}`}
                       fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 900px"
+                      sizes="(max-width: 768px) 100vw, 900px"
+                      priority={activeSlide === 0}
                     />
                   </div>
                   {slides[activeSlide].text && (
@@ -122,21 +149,35 @@ export default function Projects() {
             ))}
           </div>
 
-          {project.url && (
-            <div className="link-site-container">
-              <Link className="glass-effect link" href={project.url} target="_blank">
-                Visit Site
+          {/* Links */}
+          <div className="project-links">
+            {project.url && (
+              <Link
+                className="project-link glass-effect"
+                href={project.url}
+                target="_blank"
+              >
+                Visit Live Site &rarr;
               </Link>
-            </div>
-          )}
-        </div>
+            )}
+            {project.github && (
+              <Link
+                className="project-link glass-effect"
+                href={project.github}
+                target="_blank"
+              >
+                View on GitHub &rarr;
+              </Link>
+            )}
+          </div>
+        </article>
       )}
     </>
   );
 }
 
-export async function getServerSideProps(contex) {
+export async function getServerSideProps() {
   return {
-    props: { project: {} },
+    props: {},
   };
 }

@@ -15,16 +15,34 @@ export default function ProjectList() {
         <section className="projects">
           <h2 className="sub-title">Projects</h2>
           <div className="grid">
-            {projects.map((project) => {
-              return (
-                <div key={project.id} className="center flex glass-effect">
-                  <Image src={project.projectimg} alt={project.name} width="250" height="150" sizes="(max-width: 700px) 100vw, 700px" />
-                  <Link className="glass-effec link" href={`projects/${project.name}`}>
-                    {project.title}
-                  </Link>
+            {projects.map((project) => (
+              <Link
+                key={project.id}
+                href={`projects/${project.name}`}
+                className="project-card glass-effect"
+              >
+                <div className="project-card-image">
+                  <Image
+                    src={project.projectimg}
+                    alt={project.name}
+                    fill
+                    sizes="(max-width: 700px) 100vw, 350px"
+                  />
                 </div>
-              );
-            })}
+                <div className="project-card-info">
+                  <span className="project-card-category">{project.category}</span>
+                  <h3 className="project-card-title">{project.title}</h3>
+                  <div className="project-card-tech">
+                    {project.tech.slice(0, 3).map((t) => (
+                      <span key={t} className="tech-tag-sm">{t}</span>
+                    ))}
+                    {project.tech.length > 3 && (
+                      <span className="tech-tag-sm">+{project.tech.length - 3}</span>
+                    )}
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </section>
       )}

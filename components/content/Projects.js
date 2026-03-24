@@ -26,21 +26,44 @@ export default function Projects() {
 
   return (
     <>
-      <motion.article className="projects" initial={"hidden"} whileInView={"visible"} viewport={{ once: false }} transition={{ stagerChildren: 0.5 }}>
-        <h2 className="sub-title ">Projects</h2>
+      <motion.article
+        className="projects"
+        initial={"hidden"}
+        whileInView={"visible"}
+        viewport={{ once: false }}
+        transition={{ staggerChildren: 0.5 }}
+      >
+        <h2 className="sub-title">Projects</h2>
         <motion.div className="grid" variants={container}>
-          {projects.map((project) => {
-            return (
-              <motion.div key={project.id} className="center flex glass-effect" variants={item}>
-                <div className="picture-container">
-                  <Image src={project.projectimg} alt={project.name} fill sizes="(max-width: 700px) 100vw, 700px" />
+          {projects.map((project) => (
+            <motion.div key={project.id} variants={item}>
+              <Link
+                href={`projects/${project.name}`}
+                className="project-card glass-effect"
+              >
+                <div className="project-card-image">
+                  <Image
+                    src={project.projectimg}
+                    alt={project.name}
+                    fill
+                    sizes="(max-width: 700px) 100vw, 350px"
+                  />
                 </div>
-                <Link className="glass-effect link" href={`projects/${project.name}`}>
-                  {project.title}
-                </Link>
-              </motion.div>
-            );
-          })}
+                <div className="project-card-info">
+                  <span className="project-card-category">{project.category}</span>
+                  <h3 className="project-card-title">{project.title}</h3>
+                  <div className="project-card-tech">
+                    {project.tech.slice(0, 3).map((t) => (
+                      <span key={t} className="tech-tag-sm">{t}</span>
+                    ))}
+                    {project.tech.length > 3 && (
+                      <span className="tech-tag-sm">+{project.tech.length - 3}</span>
+                    )}
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
         </motion.div>
       </motion.article>
     </>
