@@ -747,6 +747,7 @@ footer {
 .project-card-image {
   position: relative;
   width: 100%;
+  aspect-ratio: 16 / 10;
   flex: 1;
   min-height: 0;
 }
