@@ -1,5 +1,38 @@
 export const projects = [
   {
+    id: "9",
+    name: "Markisecentralen-SoMe",
+    title: "Markisecentralen",
+    category: "Social Media Management",
+    year: "2025–2026",
+    role: "Social Media Manager",
+    tech: ["Meta Business Suite", "Ocoya", "Content Strategy", "Instagram", "Facebook"],
+    projectimg: "/media/projects/Markisecentralen_SoMe/ocoya_calendar.png",
+    description:
+      "Managing the full social media presence for Markisecentralen, a Danish outdoor living company. From content planning and scheduling to analytics and engagement — handling both Instagram and Facebook with a focus on showcasing terrace covers, glass partitions, and outdoor spaces.",
+    mockup: "/media/projects/Markisecentralen_SoMe/meta_dashboard.png",
+    url: "https://www.instagram.com/markisecentralen.dk/",
+    github: "",
+    sections: [
+      {
+        image: "/media/projects/Markisecentralen_SoMe/ocoya_calendar.png",
+        text: "Content is planned and scheduled weekly using Ocoya, with posts distributed across optimal engagement times. The calendar view provides a clear overview of the content pipeline, ensuring consistent posting across both Instagram and Facebook.",
+      },
+      {
+        image: "/media/projects/Markisecentralen_SoMe/meta_content.png",
+        text: "All posts are managed through Meta Business Suite, tracking published content, reach, and status. The content mix includes product showcases, seasonal promotions, reels, and customer-facing educational content about outdoor living solutions.",
+      },
+      {
+        image: "/media/projects/Markisecentralen_SoMe/meta_analytics.png",
+        text: "Post performance is monitored through Meta's analytics dashboard — tracking views, reach, interactions, and follower growth. These insights drive content decisions, helping identify what resonates with the audience and optimizing future posts.",
+      },
+      {
+        image: "/media/projects/Markisecentralen_SoMe/ocoya_scheduling.png",
+        text: "Ocoya's engagement prediction helps schedule posts at the best times for maximum visibility. Each post is crafted with targeted copy, relevant hashtags, and optimized scheduling based on audience activity patterns.",
+      },
+    ],
+  },
+  {
     id: "5",
     name: "WithHomeTaste",
     title: "With Home Taste",
