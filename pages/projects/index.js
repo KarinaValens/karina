@@ -1,21 +1,41 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useContext } from "react";
-import { AppContext } from "../../components/context/AppContext";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "../api/projects";
 
+const PROJECTS_PER_PAGE = 6;
+
 export default function ProjectList() {
-  const { show } = useContext(AppContext);
+  const [page, setPage] = useState(0);
+  const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
+  const start = page * PROJECTS_PER_PAGE;
+  const visible = projects.slice(start, start + PROJECTS_PER_PAGE);
 
   return (
-    <>
-      {show ? (
-        " "
-      ) : (
-        <section className="projects">
-          <h2 className="sub-title">Projects</h2>
-          <div className="grid">
-            {projects.map((project) => (
+    <section className="projects">
+      <h2 className="sub-title">Projects</h2>
+
+      <div className="projects-carousel">
+        <button
+          className="projects-nav-btn"
+          onClick={() => setPage((p) => p - 1)}
+          disabled={page === 0}
+          aria-label="Previous page"
+        >
+          &#8249;
+        </button>
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={page}
+            className="grid"
+            initial={{ opacity: 0, x: 80 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -80 }}
+            transition={{ duration: 0.3 }}
+          >
+            {visible.map((project) => (
               <Link
                 key={project.id}
                 href={`projects/${project.name}`}
@@ -43,9 +63,29 @@ export default function ProjectList() {
                 </div>
               </Link>
             ))}
-          </div>
-        </section>
-      )}
-    </>
+          </motion.div>
+        </AnimatePresence>
+
+        <button
+          className="projects-nav-btn"
+          onClick={() => setPage((p) => p + 1)}
+          disabled={page === totalPages - 1}
+          aria-label="Next page"
+        >
+          &#8250;
+        </button>
+      </div>
+
+      <div className="projects-dots">
+        {Array.from({ length: totalPages }).map((_, i) => (
+          <button
+            key={i}
+            className={`projects-dot ${i === page ? "active" : ""}`}
+            onClick={() => setPage(i)}
+            aria-label={`Page ${i + 1}`}
+          />
+        ))}
+      </div>
+    </section>
   );
 }

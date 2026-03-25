@@ -1,18 +1,54 @@
-import Footer from "./Footer";
-import Header from "./Header";
+import Image from "next/image";
+import Link from "next/link";
+import { useContext } from "react";
 import { useRouter } from "next/router";
+import { AppContext } from "../context/AppContext";
+import Burguer from "./Burguer";
 
 export default function Layout({ children }) {
   const router = useRouter();
-  const isHome = router.pathname === "/";
+  const { show } = useContext(AppContext);
 
   return (
-    <div style={isHome ? {} : { display: "flex", flexDirection: "column", minHeight: "100vh" }}>
-      <Header />
-      <div style={isHome ? {} : { flex: 1 }}>
-        {children}
+    <div className="site-layout">
+      <div className="home-sidebar">
+        <div className="sidebar-logo">
+          <Link href="/">
+            <Image src="/media/images/logo.png" width={40} height={40} alt="logo" />
+          </Link>
+        </div>
+        <div className="sidebar-links">
+          <Link href="/about" className="sidebar-link">
+            About Me
+          </Link>
+          <Link href="/projects" className="sidebar-link">
+            Projects
+          </Link>
+        </div>
+        <div className="sidebar-social">
+          <a href="https://github.com/KarinaValens" target="_blank" rel="noreferrer">
+            <Image width={24} height={24} src="/media/icons/github.png" alt="github" />
+          </a>
+          <a href="https://www.linkedin.com/in/karinavalenswebdeveloper/" target="_blank" rel="noreferrer">
+            <Image width={24} height={24} src="/media/icons/linkedin.png" alt="linkedin" />
+          </a>
+        </div>
+        <div className="burguer-wrapper">
+          <Burguer />
+        </div>
       </div>
-      <Footer />
+
+      {show ? (
+        <div className="mobile-menu">
+          <Link className="mobile-menu-link" href="/">HOME</Link>
+          <Link className="mobile-menu-link" href="/about">ABOUT ME</Link>
+          <Link className="mobile-menu-link" href="/projects">PROJECTS</Link>
+        </div>
+      ) : (
+        <div className="site-content">
+          {children}
+        </div>
+      )}
     </div>
   );
 }
