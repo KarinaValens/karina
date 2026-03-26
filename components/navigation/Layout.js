@@ -7,13 +7,17 @@ import Burguer from "./Burguer";
 
 export default function Layout({ children }) {
   const router = useRouter();
-  const { show } = useContext(AppContext);
+  const { show, setShow } = useContext(AppContext);
+
+  const handleNavClick = () => {
+    setShow(false);
+  };
 
   return (
     <div className="site-layout">
       <div className="home-sidebar">
         <div className="sidebar-logo">
-          <Link href="/">
+          <Link href="/" onClick={handleNavClick}>
             <Image src="/media/images/logo.png" width={40} height={40} alt="logo" />
           </Link>
         </div>
@@ -40,9 +44,17 @@ export default function Layout({ children }) {
 
       {show ? (
         <div className="mobile-menu">
-          <Link className="mobile-menu-link" href="/">HOME</Link>
-          <Link className="mobile-menu-link" href="/about">ABOUT ME</Link>
-          <Link className="mobile-menu-link" href="/projects">PROJECTS</Link>
+          <Link className="mobile-menu-link" href="/" onClick={handleNavClick}>HOME</Link>
+          <Link className="mobile-menu-link" href="/about" onClick={handleNavClick}>ABOUT ME</Link>
+          <Link className="mobile-menu-link" href="/projects" onClick={handleNavClick}>PROJECTS</Link>
+          <div className="mobile-menu-social">
+            <a href="https://github.com/KarinaValens" target="_blank" rel="noreferrer">
+              <Image width={28} height={28} src="/media/icons/github.png" alt="github" />
+            </a>
+            <a href="https://www.linkedin.com/in/karinavalenswebdeveloper/" target="_blank" rel="noreferrer">
+              <Image width={28} height={28} src="/media/icons/linkedin.png" alt="linkedin" />
+            </a>
+          </div>
         </div>
       ) : (
         <div className="site-content">

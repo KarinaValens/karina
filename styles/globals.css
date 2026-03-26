@@ -304,6 +304,16 @@ main {
   color: var(--color-primary1);
 }
 
+.mobile-menu-social {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.mobile-menu-link:hover {
+  color: var(--color-primary1);
+}
+
 /* Hide burger on desktop, show on mobile */
 .home-sidebar .burguer-wrapper {
   display: none;
@@ -1262,17 +1272,26 @@ footer {
     text-align: center;
   }
 
-  /* Projects grid: 1 column on mobile */
+  /* Projects grid: 2 per page on mobile */
   .grid {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .projects h2 {
+    margin: 0.3rem auto;
+    font-size: 1.2rem;
+  }
+
+  .projects-carousel {
+    padding: 0.5rem 0.3rem 0;
   }
 
   /* About page mobile */
   .about-page {
     height: auto;
     min-height: 100vh;
-    padding: 1.5rem 1rem;
+    padding: 3.5rem 1rem 1.5rem;
   }
 
   .about-split {

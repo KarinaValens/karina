@@ -1,12 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "../api/projects";
 
-const PROJECTS_PER_PAGE = 6;
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 600);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+  return isMobile;
+}
 
 export default function ProjectList() {
+  const isMobile = useIsMobile();
+  const PROJECTS_PER_PAGE = isMobile ? 2 : 6;
   const [page, setPage] = useState(0);
   const totalPages = Math.ceil(projects.length / PROJECTS_PER_PAGE);
   const start = page * PROJECTS_PER_PAGE;

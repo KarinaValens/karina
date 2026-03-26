@@ -61,12 +61,12 @@ export default function About() {
               <span className="about-detail-value">React, Next.js, React Native, Supabase</span>
             </div>
             <div className="about-detail">
-              <span className="about-detail-label">Background</span>
-              <span className="about-detail-value">Accounting & Economics — transitioned to tech</span>
+              <span className="about-detail-label">Education</span>
+              <span className="about-detail-value">KEA — Multimedia Design & Frontend Development (2021–2023)</span>
             </div>
             <div className="about-detail">
-              <span className="about-detail-label">Education</span>
-              <span className="about-detail-value">KEA — Multimedia Design & Web Development</span>
+              <span className="about-detail-label">Background</span>
+              <span className="about-detail-value">Bachelor in Accounting & Auditing — Universidad Politécnica Salesiana, Ecuador (2012–2017)</span>
             </div>
           </motion.div>
 
