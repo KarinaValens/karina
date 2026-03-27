@@ -28,7 +28,7 @@ export default function About() {
                 alt="Karina Valens"
                 fill
                 sizes="400px"
-                style={{ objectFit: "cover", borderRadius: "10px" }}
+                style={{ objectFit: "cover", objectPosition: "center top", borderRadius: "10px" }}
               />
             </div>
           </div>
